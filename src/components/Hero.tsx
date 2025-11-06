@@ -1,31 +1,9 @@
 export function Hero() {
   return (
     <div className="relative overflow-hidden">
-      {/* Subtle patterned background */}
-      <div 
-        className="absolute inset-0"
-        style={{
-          backgroundColor: '#F5E6D3',
-          backgroundImage: `repeating-linear-gradient(
-            0deg,
-            transparent,
-            transparent 2px,
-            rgba(139, 69, 19, 0.02) 2px,
-            rgba(139, 69, 19, 0.02) 4px
-          ),
-          repeating-linear-gradient(
-            90deg,
-            transparent,
-            transparent 2px,
-            rgba(139, 69, 19, 0.02) 2px,
-            rgba(139, 69, 19, 0.02) 4px
-          )`,
-        }}
-      />
-      
       {/* Main Hero Content */}
       <div className="relative max-w-7xl mx-auto px-4 py-12 md:py-16 lg:py-20">
-    <div className="relative grid lg:grid-cols-2 gap-8 lg:gap-12 items-center bg-white/10 backdrop-blur-lg rounded-3xl border border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] p-8 md:p-12 transition-all duration-500 hover:bg-white/20">
+    <div className="relative grid lg:grid-cols-2 gap-8 lg:gap-12 items-center rounded-3xl shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] p-8 md:p-12">
           {/* LEFT: Text Content */}
           <div className="space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl text-amber-900 font-semibold drop-shadow-sm">

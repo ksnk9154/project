@@ -5,7 +5,7 @@ import { MobileNav } from "./components/MobileNav";
 import { Hero } from "./components/Hero";
 import { ContentSection } from "./components/ContentSection";
 import { Footer } from "./components/Footer";
-import { TraditionalBackground } from "./components/TraditionalBackground";
+import TraditionalBackground from "./components/TraditionalBackground";
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("home");

@@ -1,11 +1,5 @@
-# TODO: Update Background Overlay and Hero Glass Effect
+# TODO: Make Hero Section Fully Transparent for Full GIF Background
 
-- [x] Update TraditionalBackground.tsx: Change overlay from bg-white/40 to bg-white/10
-- [x] Update Hero.tsx: Replace hero wrapper with glass card code (text and image inside single translucent card)
-- [x] Restart dev server with npm run dev
-- [x] Instruct user to hard reload browser (Ctrl+Shift+R)
-
-# Optional Perfection Tweaks
-- [x] Add gradient overlay to TraditionalBackground.tsx for better readability (combined GIF + pattern)
-- [ ] Unify card styles across pages (e.g., Dr. Aravinda Rao profile) to glass style
-- [ ] Add hero fade-in animation (optional polish)
+- [ ] Remove background color and pattern from the outer div in Hero.tsx
+- [ ] Remove semi-transparent white background, blur, and hover effects from the inner content div in Hero.tsx
+- [ ] Verify the changes allow the full GIF background to be visible in the home section

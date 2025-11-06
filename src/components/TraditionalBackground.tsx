@@ -1,35 +1,29 @@
-export function TraditionalBackground() {
+export default function TraditionalBackground() {
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
+      {/* Full-page GIF background */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: "url('/images/background-gif.gif')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      ></div>
+
+      {/* Soft pattern overlay for sacred texture */}
       <div
         className="absolute inset-0"
         style={{
           backgroundImage: `
-            url('/images/background-gif.gif'),
-            repeating-linear-gradient(
-              0deg,
-              transparent,
-              transparent 2px,
-              rgba(139, 69, 19, 0.02) 2px,
-              rgba(139, 69, 19, 0.02) 4px
-            ),
-            repeating-linear-gradient(
-              90deg,
-              transparent,
-              transparent 2px,
-              rgba(139, 69, 19, 0.02) 2px,
-              rgba(139, 69, 19, 0.02) 4px
-            )`,
-          backgroundSize: 'cover, auto, auto',
-          backgroundPosition: 'center center, 0 0, 0 0',
-          backgroundRepeat: 'no-repeat, repeat, repeat',
-          backgroundAttachment: 'fixed, scroll, scroll',
-          backgroundColor: 'rgb(245,230,211)',
+            repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(139, 69, 19, 0.02) 2px, rgba(139, 69, 19, 0.02) 4px),
+            repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(139, 69, 19, 0.02) 2px, rgba(139, 69, 19, 0.02) 4px)
+          `,
         }}
       ></div>
 
-      {/* Light overlay for readability */}
-      <div className="absolute inset-0 bg-white/10 pointer-events-none"></div>
+      {/* Gentle light overlay for readability */}
+      <div className="absolute inset-0 bg-white/10 backdrop-blur-[1px]"></div>
     </div>
   );
 }
