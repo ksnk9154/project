@@ -245,12 +245,12 @@ export function ContentSection({ section }: ContentSectionProps) {
         <div className="max-w-5xl mx-auto">
           {/* Header with portrait */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="md:col-span-1">
-              <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-orange-400/50">
+            <div className="md:col-span-1 flex justify-center">
+              <div className="relative w-40 h-40 mx-auto rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-white flex items-center justify-center">
                 <img
                   src="/images/dr-aravinda-rao.jpg"
-                  alt="Dr. Karanam Aravinda Rao — Hindu Digest"
-                  className="w-full h-auto object-cover"
+                  alt="Dr. Karanam Aravinda Rao"
+                  className="w-full h-full object-contain bg-white"
                 />
               </div>
             </div>
@@ -265,7 +265,7 @@ export function ContentSection({ section }: ContentSectionProps) {
 
           {/* Content sections */}
           <div className="space-y-8">
-            <div className="bg-white/60 backdrop-blur-sm rounded-xl p-8 shadow-lg border-2 border-orange-300/50">
+            <div className="bg-white/10 backdrop-blur-lg rounded-3xl border border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] p-8 transition-all duration-500 hover:bg-white/20">
               <h2 className="text-2xl text-amber-900 mb-4">Career in Indian Police Service (IPS)</h2>
               <ul className="space-y-2 text-amber-800 list-disc list-inside">
                 <li>Served 34 years in the IPS (1977–2011)</li>
@@ -275,7 +275,7 @@ export function ContentSection({ section }: ContentSectionProps) {
               </ul>
             </div>
 
-            <div className="bg-white/60 backdrop-blur-sm rounded-xl p-8 shadow-lg border-2 border-orange-300/50">
+            <div className="bg-white/10 backdrop-blur-lg rounded-3xl border border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] p-8 transition-all duration-500 hover:bg-white/20">
               <h2 className="text-2xl text-amber-900 mb-4">Philosophical & Academic Pursuits</h2>
               <ul className="space-y-2 text-amber-800 list-disc list-inside">
                 <li>Holds a Ph.D. in Sanskrit; author of Analysis of Jnanam in the Upanishads</li>
@@ -284,7 +284,7 @@ export function ContentSection({ section }: ContentSectionProps) {
               </ul>
             </div>
 
-            <div className="bg-white/60 backdrop-blur-sm rounded-xl p-8 shadow-lg border-2 border-orange-300/50">
+            <div className="bg-white/10 backdrop-blur-lg rounded-3xl border border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] p-8 transition-all duration-500 hover:bg-white/20">
               <h2 className="text-2xl text-amber-900 mb-4">Publications & Selected Works</h2>
               <ul className="space-y-2 text-amber-800 list-disc list-inside">
                 <li><em>How to Teach Hinduism to Your Child?</em></li>
@@ -294,7 +294,7 @@ export function ContentSection({ section }: ContentSectionProps) {
               </ul>
             </div>
 
-            <div className="bg-white/60 backdrop-blur-sm rounded-xl p-8 shadow-lg border-2 border-orange-300/50">
+            <div className="bg-white/10 backdrop-blur-lg rounded-3xl border border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] p-8 transition-all duration-500 hover:bg-white/20">
               <h2 className="text-2xl text-amber-900 mb-4">Online & Public Presence</h2>
               <p className="text-amber-800 mb-4">
                 Educator at <a href="https://sanskritfromhome.org" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:underline">sanskritfromhome.org</a> and contributor to Indica Today.
@@ -357,7 +357,7 @@ export function ContentSection({ section }: ContentSectionProps) {
               { id: "KqaL2eUyyNY", title: "Featured Lecture 3" },
               { id: "Kqx45dlUUdg", title: "Featured Lecture 4" },
             ].map((video) => (
-              <div key={video.id} className="bg-white/60 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg border-2 border-orange-300/50">
+              <div key={video.id} className="bg-white/10 backdrop-blur-lg rounded-3xl overflow-hidden border border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] transition-all duration-500 hover:bg-white/20">
                 <div className="aspect-video">
                   <iframe
                     width="100%"
@@ -462,43 +462,43 @@ export function ContentSection({ section }: ContentSectionProps) {
           </div>
 
           <div className="space-y-8">
-            <div className="bg-white/60 backdrop-blur-sm rounded-xl p-8 shadow-lg border-2 border-orange-300/50">
+            <div className="bg-white/10 backdrop-blur-lg rounded-3xl border border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] p-8 transition-all duration-500 hover:bg-white/20">
               <h2 className="text-2xl text-amber-900 mb-4">Overview</h2>
               <p className="text-amber-800 mb-4">
                 Karanam Aravinda Rao is a retired DGP of Andhra Pradesh, scholar of Sanskrit and Vedanta.
               </p>
               <p className="text-amber-800 mb-4">
-                He delivers a number of video-series on YouTube under themes like: "Basic Course on Hinduism", 
+                He delivers a number of video-series on YouTube under themes like: "Basic Course on Hinduism",
                 "Understanding Hinduism", "Advaita Concepts".
               </p>
               <p className="text-amber-800">
-                On the site "SaveTemples.org" there is a category labelled Hindu Digest which collects articles 
+                On the site "SaveTemples.org" there is a category labelled Hindu Digest which collects articles
                 and posts about Hindu traditions, temple preservation etc.
               </p>
             </div>
 
-            <div className="bg-white/60 backdrop-blur-sm rounded-xl p-8 shadow-lg border-2 border-orange-300/50">
+            <div className="bg-white/10 backdrop-blur-lg rounded-3xl border border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] p-8 transition-all duration-500 hover:bg-white/20">
               <h2 className="text-2xl text-amber-900 mb-4">What "Hindu Digest" Means</h2>
               <p className="text-amber-800 mb-4">
-                In the context of his work, Hindu Digest refers to digest-style summarised content about 
+                In the context of his work, Hindu Digest refers to digest-style summarised content about
                 Hindu philosophy, practice, heritage, and culture.
               </p>
               <p className="text-amber-800 mb-4">
-                The "SaveTemples.org" portal lists "Category: Hindu Digest" where articles like temple-protection, 
+                The "SaveTemples.org" portal lists "Category: Hindu Digest" where articles like temple-protection,
                 Hindu children's education abroad, and cultural matters are posted.
               </p>
               <p className="text-amber-800">
-                On his YouTube talks, though they may not be labeled exactly "Hindu Digest", many cover broad 
+                On his YouTube talks, though they may not be labeled exactly "Hindu Digest", many cover broad
                 themes of Hinduism (e.g., "Understanding Hinduism-01"), which serve a similar digest/overview role.
               </p>
             </div>
 
-            <div className="bg-white/60 backdrop-blur-sm rounded-xl p-8 shadow-lg border-2 border-orange-300/50">
+            <div className="bg-white/10 backdrop-blur-lg rounded-3xl border border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] p-8 transition-all duration-500 hover:bg-white/20">
               <h2 className="text-2xl text-amber-900 mb-4">Key Themes & Topics</h2>
               <ul className="space-y-3 text-amber-800">
                 <li className="flex gap-3">
                   <span className="text-orange-500">•</span>
-                  <span>Presentation of Hindu philosophy (especially Vedanta / Non-duality) in accessible terms. 
+                  <span>Presentation of Hindu philosophy (especially Vedanta / Non-duality) in accessible terms.
                   E.g., "Advaita Concepts – 01" talk.</span>
                 </li>
                 <li className="flex gap-3">
@@ -507,34 +507,34 @@ export function ContentSection({ section }: ContentSectionProps) {
                 </li>
                 <li className="flex gap-3">
                   <span className="text-orange-500">•</span>
-                  <span>Heritage, temple protection and diaspora issues: e.g., talk on "How to Raise and Protect our 
+                  <span>Heritage, temple protection and diaspora issues: e.g., talk on "How to Raise and Protect our
                   Precious Hindu Children in USA".</span>
                 </li>
               </ul>
             </div>
 
-            <div className="bg-white/60 backdrop-blur-sm rounded-xl p-8 shadow-lg border-2 border-orange-300/50">
+            <div className="bg-white/10 backdrop-blur-lg rounded-3xl border border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] p-8 transition-all duration-500 hover:bg-white/20">
               <h2 className="text-2xl text-amber-900 mb-4">Why This is Useful</h2>
               <ul className="space-y-3 text-amber-800">
                 <li className="flex gap-3">
                   <span className="text-orange-500">•</span>
-                  <span>If you want a digest (that is: overview, accessible summary) of Hindu tradition rather than 
+                  <span>If you want a digest (that is: overview, accessible summary) of Hindu tradition rather than
                   deeply academic trench-work, his content is well suited.</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-orange-500">•</span>
-                  <span>It bridges philosophy + cultural application, so it's useful for someone who wants the "big picture" 
+                  <span>It bridges philosophy + cultural application, so it's useful for someone who wants the "big picture"
                   of Hinduism: belief systems, living practices, heritage issues.</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-orange-500">•</span>
-                  <span>The fact that it draws from someone with both scholarly background and public-service 
+                  <span>The fact that it draws from someone with both scholarly background and public-service
                   (retired DGP) gives a practical flavour.</span>
                 </li>
               </ul>
             </div>
 
-            <div className="bg-white/60 backdrop-blur-sm rounded-xl p-8 shadow-lg border-2 border-orange-300/50">
+            <div className="bg-white/10 backdrop-blur-lg rounded-3xl border border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] p-8 transition-all duration-500 hover:bg-white/20">
               <h2 className="text-2xl text-amber-900 mb-4">How to Use it Effectively</h2>
               <ul className="space-y-3 text-amber-800">
                 <li className="flex gap-3">
@@ -543,17 +543,17 @@ export function ContentSection({ section }: ContentSectionProps) {
                 </li>
                 <li className="flex gap-3">
                   <span className="text-orange-500">•</span>
-                  <span>As you watch/listen, note down unfamiliar Sanskrit terms or concepts (e.g., "Advaita", "Brahman", 
+                  <span>As you watch/listen, note down unfamiliar Sanskrit terms or concepts (e.g., "Advaita", "Brahman",
                   "Atman") and keep a glossary.</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-orange-500">•</span>
-                  <span>Supplement the videos with the "Hindu Digest" articles on SaveTemples.org to see how the philosophy 
+                  <span>Supplement the videos with the "Hindu Digest" articles on SaveTemples.org to see how the philosophy
                   applies in heritage / social contexts.</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-orange-500">•</span>
-                  <span>For deeper study: after the overview talks, you could dive into specific series (like the Gita talks, 
+                  <span>For deeper study: after the overview talks, you could dive into specific series (like the Gita talks,
                   or more advanced Vedanta) if you wish.</span>
                 </li>
               </ul>
@@ -781,11 +781,11 @@ export function ContentSection({ section }: ContentSectionProps) {
           </div>
 
           {/* Durga Mata Image */}
-          <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl border-4 border-orange-400/50">
+          <div className="relative w-full max-w-md mx-auto overflow-hidden rounded-3xl shadow-2xl border border-white/30 h-[500px] md:h-[600px]">
             <img
               src="/images/Durga Mata.jpg"
               alt="Durga Mata"
-              className="w-full h-96 object-cover"
+              className="absolute top-0 left-0 w-full h-full object-cover object-top scale-110"
             />
           </div>
 
