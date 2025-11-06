@@ -5,7 +5,7 @@ export function TraditionalBackground() {
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: `url('/images/background.png')`,
+          backgroundImage: `url('/images/background-gif.gif')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

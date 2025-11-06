@@ -22,6 +22,80 @@ const wisdomQuotes = [
   }
 ];
 
+const bhagavadGitaSlokas = [
+  {
+    sanskrit: "या एनं वेत्ति हन्तारं यश्चैनं मन्यते हतम्।\nउभौ तौ न विजानीतो नायं हन्ति न हन्यते ॥ २-१९॥",
+    transliteration: "ya enam vetti hantārām yaścainaṁ manyate hatam,\nubhau tau na vijānīto nāyaṁ hanti na hanyate .. 2-19..",
+    translation: "One who considers this jiva as the slayer and one who considers it as slain are both incorrect. This jiva neither kills nor gets killed.",
+    explanation: "The essential nature of jiva is consciousness which is eternal. The body may get killed but consciousness never ceases to exist.",
+    source: "The Bhagavad Gita for A Modern Student by Dr. K. Aravinda Rao"
+  },
+  {
+    sanskrit: "मयि सर्वाणि कर्माणि संन्यस्याध्यात्मचेतसा।\nनिर्शीरनिर्ममो भूत्वा युध्यस्व विगतज्वः : ॥ ३-३० ॥",
+    transliteration: "māyi sarvāṇi karmāṇi samnyasyādhyātma-cetasā\nnirāśīr-nirmamo bhūtvā yudhyasva vigata-jvaraḥ .. 3-30..",
+    translation: "Do your fight, surrendering all actions to me (performing ethical duties as ordained), with your attention on the nature of Self, with no expectation or attachment, and without feverishness (anxiety).",
+    source: "The Bhagavad Gita for A Modern Student by Dr. K. Aravinda Rao"
+  },
+  {
+    sanskrit: "न कर्मणामनारम्भान्नैष्कर्म्यं पुरुषोऽश्नुते।\nन च संन्यासनादेव सिद्धिं समधिगच्छति ॥ ३-४ ॥",
+    transliteration: "na karmaṇāṁ-anārambhān-naiṣkarmyaṁ puruṣo'śnute .\nna ca samnyāsanād-eva siddhiṁ sam-adhigacchati .. 3-4..",
+    translation: "A person would not attain an actionless state by merely abandoning duty. He would not attain fulfillment by renouncing work.",
+    source: "The Bhagavad Gita for A Modern Student by Dr. K. Aravinda Rao"
+  },
+  {
+    sanskrit: "कर्मजं बुद्धियुक्ता हि फलं त्यक्त्वा मनीषिणः।\nजन्मबन्धविनिर्मुक्ताः पदं गच्छन्त्यानामयम् ॥ २-५१ ॥",
+    transliteration: "karmajaṁ buddhi-yuktā hi phalaṁ tyaktvā maniṣiṇaḥ .\njanma-bandha-vinirmuktāḥ padaṁ gacchanty-anāmayam .. 2-51..",
+    translation: "Wise men, possessing evenness of mind, having given up the fruit of karma, get freed from the bond of birth (and death) and attain the state which is beyond sorrow.",
+    source: "The Bhagavad Gita for A Modern Student by Dr. K. Aravinda Rao"
+  },
+  {
+    sanskrit: "उद्धरेदात्मनात्मानं नात्मानमवसादयेत्।\nआत्मैव ह्यात्मनो बन्धुरात्मैव रिपुरात्मनः ॥ ६-५ ॥",
+    transliteration: "uddhared-ātmanātmānaṁ nātmānam-avasādayet .\nātmaiva hyātmano bandhur-ātmaiva ripur-ātmanaḥ .. 6-5..",
+    translation: "One should uplift oneself by one's own self and one should not weaken the self. It is because, the self is the friend of the self and the self is the enemy of oneself.",
+    source: "The Bhagavad Gita for A Modern Student by Dr. K. Aravinda Rao"
+  },
+  {
+    sanskrit: "श्रेयान्स्वधर्मो विगुणः परधर्मात्स्वनुष्ठितात्।\nस्वभावनियतं कर्म कुर्वन्नाप्नोति किल्बिषम् ॥ १८-४७ ॥",
+    transliteration: "śreyān-svadharmo viguṇaḥ para-dharmāt-svanuṣṭhitāt .\nsvabhāva-niyataṁ karma kurvann-āpnoti kilbiṣam .. 18-47..",
+    translation: "One's own dharma, though devoid of excellence, is better for a person than someone else's dharma well observed. A person does not attain sin by performing karma (duty) determined by his nature.",
+    source: "The Bhagavad Gita for A Modern Student by Dr. K. Aravinda Rao"
+  },
+  {
+    sanskrit: "विषया विनिवर्तन्ते निराहारस्य देहिनः।\nरसवर्जं रसोऽप्यस्य परं दृष्ट्वा निवर्तते ॥ २-५९ ॥",
+    transliteration: "viṣayā vinivartante nirāhārasya dehinaḥ .\nrasa-varjaṁ raso'pyasya paraṁ dṛṣṭvā nivartate .. 2-59..",
+    translation: "Sense objects withdraw when the person withdraws from them but the desire for them lingers. Such desire too retreats when the Supreme Truth is realized.",
+    source: "The Bhagavad Gita for A Modern Student by Dr. K. Aravinda Rao"
+  }
+];
+
+const booksByDrRao = [
+  {
+    title: "The Bhagavad Gita for A Modern Student",
+    author: "Dr. K. Aravinda Rao",
+    description: "A comprehensive modern commentary on the Bhagavad Gita, making ancient wisdom accessible to contemporary readers."
+  },
+  {
+    title: "Bhagawadgeetha Manakem Cheputhondi",
+    author: "Dr. K. Aravinda Rao",
+    description: "Telugu language exploration of the Bhagavad Gita's teachings and their relevance to modern life."
+  },
+  {
+    title: "Indic Religions Challenges for Survival",
+    author: "Dr. K. Aravinda Rao",
+    description: "An analysis of the contemporary challenges facing Indic religions and pathways for preservation."
+  },
+  {
+    title: "How to Teach Hinduism to Your Child?",
+    author: "Dr. K. Aravinda Rao",
+    description: "A practical guide for parents to introduce Hindu philosophy and values to children."
+  },
+  {
+    title: "Bharatiya Mataalu Desha Badrata Edurkontunna Savallu",
+    author: "Dr. K. Aravinda Rao",
+    description: "Telugu language work addressing challenges facing Indian religions and cultural survival."
+  }
+];
+
 const sectionContent: Record<
   string,
   {
@@ -44,7 +118,7 @@ const sectionContent: Record<
     description:
       "Dr. Karanam Aravinda Rao is a retired Director General of Police (DGP) of united Andhra Pradesh, an author and a leading speaker on Sanatana Dharma and Advaita Vedanta.",
     showImage: true,
-    imageUrl: "/images/dr-aravinda-rao.jpg",
+    imageUrl: "/images/Dr. Karanam Aravinda Rao.jpg",
     quote: wisdomQuotes[1]
   },
   "about-hindu-digest": {
@@ -354,7 +428,334 @@ export function ContentSection({ section }: ContentSectionProps) {
         transition={{ duration: 0.5 }}
         className="py-16 px-4 md:px-8 relative"
       >
-        <ContactForm />
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <MessageCircle className="w-16 h-16 text-orange-500 mx-auto mb-4" />
+            <h2 className="text-3xl md:text-4xl text-amber-900 mb-4">
+              Q&A & Contact Us
+            </h2>
+            <div className="w-24 h-1 bg-orange-500 mx-auto mb-6" />
+            <p className="text-lg text-amber-800 max-w-2xl mx-auto mb-8">
+              Explore our extensive archive of questions on Hindu philosophy and Dr. Aravinda Rao's responses. 
+              We also welcome your inquiries about our teachings, programs, and resources.
+            </p>
+          </div>
+          <ContactForm />
+        </div>
+      </motion.div>
+    );
+  }
+
+  // Special handling for About Hindu Digest
+  if (section === "about-hindu-digest") {
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="py-16 px-4 md:px-8 relative"
+      >
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl text-amber-900 mb-6">About Hindu Digest</h1>
+            <div className="w-24 h-1 bg-orange-500 mx-auto mb-8" />
+          </div>
+
+          <div className="space-y-8">
+            <div className="bg-white/60 backdrop-blur-sm rounded-xl p-8 shadow-lg border-2 border-orange-300/50">
+              <h2 className="text-2xl text-amber-900 mb-4">Overview</h2>
+              <p className="text-amber-800 mb-4">
+                Karanam Aravinda Rao is a retired DGP of Andhra Pradesh, scholar of Sanskrit and Vedanta.
+              </p>
+              <p className="text-amber-800 mb-4">
+                He delivers a number of video-series on YouTube under themes like: "Basic Course on Hinduism", 
+                "Understanding Hinduism", "Advaita Concepts".
+              </p>
+              <p className="text-amber-800">
+                On the site "SaveTemples.org" there is a category labelled Hindu Digest which collects articles 
+                and posts about Hindu traditions, temple preservation etc.
+              </p>
+            </div>
+
+            <div className="bg-white/60 backdrop-blur-sm rounded-xl p-8 shadow-lg border-2 border-orange-300/50">
+              <h2 className="text-2xl text-amber-900 mb-4">What "Hindu Digest" Means</h2>
+              <p className="text-amber-800 mb-4">
+                In the context of his work, Hindu Digest refers to digest-style summarised content about 
+                Hindu philosophy, practice, heritage, and culture.
+              </p>
+              <p className="text-amber-800 mb-4">
+                The "SaveTemples.org" portal lists "Category: Hindu Digest" where articles like temple-protection, 
+                Hindu children's education abroad, and cultural matters are posted.
+              </p>
+              <p className="text-amber-800">
+                On his YouTube talks, though they may not be labeled exactly "Hindu Digest", many cover broad 
+                themes of Hinduism (e.g., "Understanding Hinduism-01"), which serve a similar digest/overview role.
+              </p>
+            </div>
+
+            <div className="bg-white/60 backdrop-blur-sm rounded-xl p-8 shadow-lg border-2 border-orange-300/50">
+              <h2 className="text-2xl text-amber-900 mb-4">Key Themes & Topics</h2>
+              <ul className="space-y-3 text-amber-800">
+                <li className="flex gap-3">
+                  <span className="text-orange-500">•</span>
+                  <span>Presentation of Hindu philosophy (especially Vedanta / Non-duality) in accessible terms. 
+                  E.g., "Advaita Concepts – 01" talk.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-orange-500">•</span>
+                  <span>Cultural and social dimensions of Hinduism: e.g., his talk "Towards a Positive Semantics of Brahminism".</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-orange-500">•</span>
+                  <span>Heritage, temple protection and diaspora issues: e.g., talk on "How to Raise and Protect our 
+                  Precious Hindu Children in USA".</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white/60 backdrop-blur-sm rounded-xl p-8 shadow-lg border-2 border-orange-300/50">
+              <h2 className="text-2xl text-amber-900 mb-4">Why This is Useful</h2>
+              <ul className="space-y-3 text-amber-800">
+                <li className="flex gap-3">
+                  <span className="text-orange-500">•</span>
+                  <span>If you want a digest (that is: overview, accessible summary) of Hindu tradition rather than 
+                  deeply academic trench-work, his content is well suited.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-orange-500">•</span>
+                  <span>It bridges philosophy + cultural application, so it's useful for someone who wants the "big picture" 
+                  of Hinduism: belief systems, living practices, heritage issues.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-orange-500">•</span>
+                  <span>The fact that it draws from someone with both scholarly background and public-service 
+                  (retired DGP) gives a practical flavour.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white/60 backdrop-blur-sm rounded-xl p-8 shadow-lg border-2 border-orange-300/50">
+              <h2 className="text-2xl text-amber-900 mb-4">How to Use it Effectively</h2>
+              <ul className="space-y-3 text-amber-800">
+                <li className="flex gap-3">
+                  <span className="text-orange-500">•</span>
+                  <span>Start with the playlist labelled "Basic Course on Hinduism" to get foundational material.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-orange-500">•</span>
+                  <span>As you watch/listen, note down unfamiliar Sanskrit terms or concepts (e.g., "Advaita", "Brahman", 
+                  "Atman") and keep a glossary.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-orange-500">•</span>
+                  <span>Supplement the videos with the "Hindu Digest" articles on SaveTemples.org to see how the philosophy 
+                  applies in heritage / social contexts.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-orange-500">•</span>
+                  <span>For deeper study: after the overview talks, you could dive into specific series (like the Gita talks, 
+                  or more advanced Vedanta) if you wish.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-gradient-to-r from-orange-100/80 to-amber-100/80 rounded-2xl p-8 shadow-lg text-center">
+              <h3 className="text-2xl text-amber-900 mb-4">Featured Introduction Video</h3>
+              <div className="aspect-video max-w-3xl mx-auto bg-white/60 rounded-xl overflow-hidden shadow-lg border-2 border-orange-300/50">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/Q3tNA7Kjn1s"
+                  title="Introduction to Hindu Digest"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+              <div className="mt-6">
+                <a
+                  href="https://www.youtube.com/watch?v=Q3tNA7Kjn1s"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors shadow-lg"
+                >
+                  <Youtube className="w-5 h-5" />
+                  Watch on YouTube
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    );
+  }
+
+  // Special handling for Writings by Dr. Aravinda Rao
+  if (section === "writings-dr-rao") {
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="py-16 px-4 md:px-8 relative"
+      >
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <Book className="w-16 h-16 text-orange-500 mx-auto mb-4" />
+            <h2 className="text-3xl md:text-4xl text-amber-900 mb-4">
+              Books by Dr. Karanam Aravinda Rao
+            </h2>
+            <div className="w-24 h-1 bg-orange-500 mx-auto mb-6" />
+            <p className="text-xl text-amber-800 max-w-3xl mx-auto">
+              Explore comprehensive works on Vedanta, Advaita philosophy, and Hindu thought by Dr. Aravinda Rao
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {booksByDrRao.map((book, index) => (
+              <div
+                key={index}
+                className="bg-white/60 backdrop-blur-sm rounded-xl p-6 shadow-lg border-2 border-orange-300/50 hover:border-orange-500 transition-all"
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <Book className="w-8 h-8 text-orange-500 flex-shrink-0 mt-1" />
+                  <h3 className="text-xl text-amber-900">{book.title}</h3>
+                </div>
+                <p className="text-sm text-orange-600 mb-3">by {book.author}</p>
+                <p className="text-amber-800 leading-relaxed">{book.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center bg-gradient-to-r from-orange-100/80 to-amber-100/80 rounded-2xl p-8 shadow-lg">
+            <h3 className="text-2xl text-amber-900 mb-4">Get These Books</h3>
+            <p className="text-amber-800 mb-6">
+              Visit our shop to purchase these insightful works and deepen your understanding of Sanatana Dharma
+            </p>
+            <button className="px-8 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors shadow-lg">
+              Visit Shop
+            </button>
+          </div>
+        </div>
+      </motion.div>
+    );
+  }
+
+  // Special handling for Books section in Shop
+  if (section === "books") {
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="py-16 px-4 md:px-8 relative"
+      >
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <Book className="w-16 h-16 text-orange-500 mx-auto mb-4" />
+            <h2 className="text-3xl md:text-4xl text-amber-900 mb-4">
+              Books by Dr. Aravinda Rao
+            </h2>
+            <div className="w-24 h-1 bg-orange-500 mx-auto mb-6" />
+            <p className="text-xl text-amber-800 max-w-3xl mx-auto">
+              Discover comprehensive books on Vedanta, Advaita philosophy, and Hindu thought. 
+              Available in English and Telugu.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {booksByDrRao.map((book, index) => (
+              <div
+                key={index}
+                className="bg-white/60 backdrop-blur-sm rounded-xl p-6 shadow-lg border-2 border-orange-300/50 hover:border-orange-500 transition-all"
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <Book className="w-8 h-8 text-orange-500 flex-shrink-0 mt-1" />
+                  <h3 className="text-xl text-amber-900">{book.title}</h3>
+                </div>
+                <p className="text-sm text-orange-600 mb-3">by {book.author}</p>
+                <p className="text-amber-800 leading-relaxed mb-4">{book.description}</p>
+                <button className="w-full px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors shadow">
+                  Add to Basket
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+    );
+  }
+
+  // Special handling for Talks & Interviews
+  if (section === "talks-interviews") {
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="py-16 px-4 md:px-8 relative"
+      >
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <Youtube className="w-16 h-16 text-red-600 mx-auto mb-4" />
+            <h2 className="text-3xl md:text-4xl text-amber-900 mb-4">
+              Talks & Interviews
+            </h2>
+            <div className="w-24 h-1 bg-orange-500 mx-auto mb-6" />
+            <p className="text-xl text-amber-800 max-w-3xl mx-auto">
+              {content.description}
+            </p>
+          </div>
+
+          {/* Featured Interview */}
+          <div className="mb-12 bg-white/60 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg border-2 border-orange-300/50">
+            <div className="aspect-video">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/Q3tNA7Kjn1s"
+                title="Interview with Dr. Aravinda Rao"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+            </div>
+            <div className="p-6">
+              <h3 className="text-2xl text-amber-900 mb-3">Featured Interview</h3>
+              <p className="text-amber-800 mb-4">
+                Watch Dr. Aravinda Rao discuss the fundamentals of Hinduism and Vedanta philosophy
+              </p>
+              <a
+                href="https://www.youtube.com/watch?v=Q3tNA7Kjn1s"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-red-600 hover:text-red-700 transition-colors"
+              >
+                <Youtube className="w-5 h-5" />
+                Watch on YouTube →
+              </a>
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center bg-gradient-to-r from-orange-100/80 to-amber-100/80 rounded-2xl p-8 shadow-lg">
+            <h3 className="text-2xl text-amber-900 mb-4">Explore More Talks</h3>
+            <p className="text-amber-800 mb-6">
+              Visit our YouTube channel for a complete collection of talks, interviews, and discussions
+            </p>
+            <a
+              href="https://youtube.com/@hindu-digest"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors shadow-lg"
+            >
+              <Youtube className="w-6 h-6" />
+              Visit YouTube Channel
+            </a>
+          </div>
+        </div>
       </motion.div>
     );
   }
@@ -368,37 +769,87 @@ export function ContentSection({ section }: ContentSectionProps) {
         transition={{ duration: 0.5 }}
         className="py-16 px-4 md:px-8 relative"
       >
-        <div className="max-w-4xl mx-auto relative z-10">
+        <div className="max-w-5xl mx-auto relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl text-amber-900 mb-4">
-              {content.title}
+              Teachings from the Bhagavad Gita
             </h2>
             <div className="w-24 h-1 bg-orange-500 mx-auto mb-6" />
-            <p className="text-lg text-amber-800">{content.description}</p>
+            <p className="text-lg text-amber-800 max-w-3xl mx-auto">
+              Sacred verses from the Bhagavad Gita with translations and commentary by Dr. K. Aravinda Rao
+            </p>
           </div>
 
-          {content.showImage && content.imageUrl && (
-            <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl border-4 border-orange-400/50">
-              <img
-                src={content.imageUrl}
-                alt={content.title}
-                className="w-full h-96 object-cover"
-              />
-            </div>
-          )}
+          {/* Durga Mata Image */}
+          <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl border-4 border-orange-400/50">
+            <img
+              src="/images/Durga Mata.jpg"
+              alt="Durga Mata"
+              className="w-full h-96 object-cover"
+            />
+          </div>
 
+          {/* Bhagavad Gita Slokas */}
           <div className="space-y-8">
-            {wisdomQuotes.map((item, index) => (
+            {bhagavadGitaSlokas.map((sloka, index) => (
               <div
                 key={index}
-                className="bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-xl border-l-4 border-orange-500"
+                className="bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-xl border-2 border-orange-300/50"
               >
-                <p className="text-xl text-amber-900 italic mb-4">
-                  "{item.quote}"
-                </p>
-                <p className="text-orange-600">— {item.author}</p>
+                {/* Sanskrit Text */}
+                <div className="mb-4 p-4 bg-gradient-to-r from-orange-50 to-amber-50 rounded-lg">
+                  <p className="text-xl text-amber-900 whitespace-pre-line">
+                    {sloka.sanskrit}
+                  </p>
+                </div>
+                
+                {/* Transliteration */}
+                <div className="mb-4">
+                  <p className="text-orange-700 italic whitespace-pre-line">
+                    {sloka.transliteration}
+                  </p>
+                </div>
+                
+                {/* Translation */}
+                <div className="mb-4 p-4 bg-white/60 rounded-lg border-l-4 border-orange-500">
+                  <p className="text-amber-900">{sloka.translation}</p>
+                </div>
+                
+                {/* Explanation if available */}
+                {sloka.explanation && (
+                  <div className="mb-4">
+                    <p className="text-amber-800 italic">{sloka.explanation}</p>
+                  </div>
+                )}
+                
+                {/* Source */}
+                <div className="mt-4 pt-4 border-t border-orange-200">
+                  <p className="text-sm text-orange-600">— {sloka.source}</p>
+                </div>
               </div>
             ))}
+          </div>
+
+          {/* Call to Action */}
+          <div className="mt-12 text-center bg-gradient-to-r from-orange-100/80 to-amber-100/80 rounded-2xl p-8 shadow-lg">
+            <h3 className="text-2xl text-amber-900 mb-4">Explore More Teachings</h3>
+            <p className="text-amber-800 mb-6">
+              Discover more wisdom from Dr. Aravinda Rao's teachings on the Bhagavad Gita and Vedanta
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="https://youtube.com/@hindu-digest"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors shadow-lg"
+              >
+                <Youtube className="w-5 h-5" />
+                YouTube Channel
+              </a>
+              <button className="px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors shadow-lg">
+                Shop Books
+              </button>
+            </div>
           </div>
         </div>
       </motion.div>

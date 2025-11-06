@@ -31,22 +31,17 @@ const menuItems: MenuItem[] = [
       { label: "Articles", id: "articles-main" },
       { label: "Writings by Dr. Aravinda Rao", id: "writings-dr-rao" },
       { label: "Teachings", id: "teachings" },
-      { label: "Community Articles", id: "community-articles" },
       { label: "Talks & Interviews", id: "talks-interviews" },
     ],
   },
-  { label: "Media Clips", id: "media-clips" },
   {
     label: "Shop",
     id: "shop",
     children: [
       { label: "Books", id: "books" },
-      { label: "Audio", id: "audio" },
-      { label: "Video", id: "video" },
     ],
   },
-  { label: "Q&A", id: "qa" },
-  { label: "Contact", id: "contact" },
+  { label: "Q&A & Contact", id: "contact" },
 ];
 
 export function MobileNav({ onNavigate, activeSection }: MobileNavProps) {

@@ -14,7 +14,7 @@ export function Header({ onBasketClick }: HeaderProps) {
           <div className="relative">
             <div className="w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-lg overflow-hidden bg-white">
               <img 
-                src="/images/om-logo.png" 
+                src="/images/logo.png" 
                 alt="Hindu Digest Logo" 
                 className="w-full h-full object-contain"
               />

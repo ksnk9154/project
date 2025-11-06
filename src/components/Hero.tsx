@@ -50,7 +50,7 @@ export function Hero() {
           <div className="relative flex justify-center lg:justify-end">
             <div className="relative w-full max-w-md">
               <img
-                src="/images/ganesha.png"
+                src="/images/ganesh home screen.png"
                 alt="Lord Ganesha"
                 className="w-full h-auto rounded-lg shadow-2xl"
               />

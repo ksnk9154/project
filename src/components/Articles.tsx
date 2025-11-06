@@ -18,8 +18,7 @@ const articles: Article[] = [
     date: "March 15, 2025",
     content:
       "Dharma is the eternal law that sustains the universe and guides righteous living. It is not merely a set of rules or religious observances, but the fundamental principle that upholds cosmic order (Rita) and moral order in society. In the Bhagavad Gita, Lord Krishna teaches that each person has their own Dharma (Swadharma) based on their nature and position in life. Understanding and following one's Dharma leads to harmony within oneself and with the world. Dharma encompasses duty, righteousness, morality, and the natural law that governs all existence.",
-    image:
-      "https://images.unsplash.com/photo-1706777256918-6b904e41b619?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzaGl2YSUyMG1lZGl0YXRpb24lMjBzdGF0dWV8ZW58MXx8fHwxNzYyMzIyNTkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    image: "/images/article 1 image.png",
     youtubeUrl: "https://youtu.be/L6EbWtNFbQM"
   },
   {
@@ -29,8 +28,7 @@ const articles: Article[] = [
     date: "March 10, 2025",
     content:
       "Bhakti, or devotion, is one of the primary paths to spiritual realization in Hindu philosophy. The Bhagavad Gita describes Bhakti as loving surrender to the Divine, where the devotee offers all actions and their fruits to God. This path is accessible to all, regardless of learning or social position. True Bhakti transforms the heart, purifies the mind, and leads to the direct experience of the Divine presence. It is not mere emotional sentiment, but a profound state of consciousness where the devotee sees the Divine in all beings and all actions become worship.",
-    image:
-      "https://images.unsplash.com/photo-1679841797892-aea650e48a6f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxrcmlzaG5hJTIwZmx1dGUlMjBzcGlyaXR1YWx8ZW58MXx8fHwxNzYyMzIyNTkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    image: "/images/article 2 The Path of Bhakti Devotion as Spiritual Practice.png",
     youtubeUrl: "https://youtu.be/I_4WjACYCgo"
   },
   {
@@ -40,8 +38,7 @@ const articles: Article[] = [
     date: "March 5, 2025",
     content:
       "Vedanta, the culmination of Vedic wisdom found in the Upanishads, reveals the true nature of reality. It teaches that Brahman (the Absolute) is the only reality, and the individual self (Atman) is identical with Brahman. The apparent world of multiplicity is Maya, not false but a dependent reality that veils the true nature of the Self. Through knowledge (Jnana), discrimination (Viveka), and meditation, one can realize this truth directly. This realization brings liberation (Moksha) from the cycle of birth and death, and the experience of infinite peace and bliss.",
-    image:
-      "https://images.unsplash.com/photo-1658658160464-b018548d6648?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoaW5kdSUyMGRlaXR5JTIwc3RhdHVlJTIwdGVtcGxlfGVufDF8fHx8MTc2MjMyMjU5Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+    image: "/images/article 3 Vedanta and the Nature of Reality.png",
     youtubeUrl: "https://youtu.be/KqaL2eUyyNY"
   },
   {
@@ -51,8 +48,7 @@ const articles: Article[] = [
     date: "February 28, 2025",
     content:
       "The Bhagavad Gita, though ancient, addresses the perennial questions of human existence and provides practical guidance for modern life. It teaches Karma Yoga (the path of selfless action), Bhakti Yoga (the path of devotion), and Jnana Yoga (the path of knowledge). The Gita emphasizes performing one's duty without attachment to results, maintaining equanimity in success and failure, and recognizing the Divine presence in all. These teachings help us navigate contemporary challenges while maintaining spiritual awareness and inner peace.",
-    image:
-      "https://images.unsplash.com/photo-1759937932463-54d9133d6538?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsYWtzaG1pJTIwZ29kZGVzcyUyMHN0YXR1ZXxlbnwxfHx8fDE3NjIzMjI1OTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    image: "/images/article 4 The Bhagavad Gita A Guide for Modern Life.png",
     youtubeUrl: "https://youtu.be/Kqx45dlUUdg"
   },
   {
@@ -62,8 +58,7 @@ const articles: Article[] = [
     date: "February 20, 2025",
     content:
       "Sanskar refers to both the traditional sacraments (Samskaras) marking life's important transitions and the cultural refinement that comes from spiritual practice and ethical living. The sixteen major Sanskars, from birth to death, are designed to sanctify each stage of life and guide the individual toward spiritual maturity. Beyond rituals, Sanskar represents the values, virtues, and cultural heritage transmitted from generation to generation. These impressions (Samskaras) shape our character, thinking patterns, and spiritual orientation, connecting us to our dharmic roots.",
-    image:
-      "https://images.unsplash.com/photo-1761471680024-95bce6bb0c2b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzYXJhc3dhdGklMjB3aXNkb20lMjBnb2RkZXNzfGVufDF8fHx8MTc2MjMyMjU5NHww&ixlib=rb-4.1.0&q=80&w=1080"
+    image: "/images/article 5 Sanskar Cultural Values and Spiritual Refinement.png"
   },
   {
     id: "6",
@@ -72,8 +67,7 @@ const articles: Article[] = [
     date: "February 12, 2025",
     content:
       "The central teaching of Advaita Vedanta is the identity of Atman (individual self) and Brahman (universal consciousness). The Upanishads proclaim 'Tat Tvam Asi' (You are That), revealing that our true nature is not the body-mind complex but pure consciousness itself. This Self is eternally free, unchanging, and infinite. The sense of being a limited individual is due to ignorance (Avidya). Through self-inquiry, scriptural study, and meditation under a qualified teacher, this ignorance is dispelled, and one realizes their true nature as the infinite Self.",
-    image:
-      "https://images.unsplash.com/photo-1639792378050-85d804ba7b98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoaW5kdSUyMHRlbXBsZSUyMGRldm90aW9ufGVufDF8fHx8MTc2MjMyMjU5NHww&ixlib=rb-4.1.0&q=80&w=1080"
+    image: "/images/article 6 Understanding the Self Atman in Advaita Vedanta.png"
   },
 ];
 

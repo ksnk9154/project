@@ -6,13 +6,13 @@ Place the following images in this directory for the Hindu Digest website to wor
 
 These images are essential for the site to display correctly:
 
-### 1. background.png
+### 1. background-gif.gif
 - **Description:** Golden ornamental background pattern with decorative corners and center mandala
 - **Usage:** Fixed background across all pages
 - **Recommended Size:** 1920x1080 or larger
-- **Format:** PNG (with transparency support)
+- **Format:** GIF (animated or static)
 
-### 2. ganesha.png
+### 2. ganesh home screen.png
 - **Description:** Colorful Lord Ganesha image with decorative background
 - **Usage:** Hero section on home page (right side)
 - **Recommended Size:** 800x1000 pixels or similar aspect ratio
@@ -47,14 +47,14 @@ These images enhance specific content pages. If not provided, pages will still f
 - **Format:** JPG
 
 ### 7. wisdom.jpg
-- **Description:** Lakshmi goddess or wisdom symbolism
-- **Usage:** Teachings & Wisdom Quotes page
+- **Description:** Durga Mata image for wisdom and teaching
+- **Usage:** Teachings page (displays above Bhagavad Gita slokas)
 - **Recommended Size:** 1200x600 pixels
 - **Format:** JPG
 
 ### 8. meditation.jpg
-- **Description:** Saraswati or meditation imagery
-- **Usage:** Talks & Interviews page
+- **Description:** Meditation or spiritual imagery (no goddess photo needed)
+- **Usage:** Talks & Interviews page (replaced with YouTube embeds)
 - **Recommended Size:** 1200x800 pixels
 - **Format:** JPG
 
@@ -81,13 +81,13 @@ These images enhance specific content pages. If not provided, pages will still f
 ```
 public/
 └── images/
-    ├── background.png         (Required)
-    ├── ganesha.png           (Required)
+    ├── background-gif.gif    (Required - Updated!)
+    ├── ganesh home screen.png (Required - Updated!)
     ├── om-logo.png           (Required)
     ├── dr-aravinda-rao.jpg   (Optional)
     ├── temple.jpg            (Optional)
     ├── deity.jpg             (Optional)
-    ├── wisdom.jpg            (Optional)
+    ├── wisdom.jpg            (Optional - Durga Mata)
     ├── meditation.jpg        (Optional)
     ├── spiritual.jpg         (Optional)
     ├── music.jpg             (Optional)

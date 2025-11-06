@@ -18,9 +18,10 @@ Visit `http://localhost:3000` to view the site.
 
 Before running the application, add these images to `/public/images/`:
 
-1. **background.png** - Golden ornamental background pattern
-2. **ganesha.png** - Lord Ganesha image for hero section
-3. **om-logo.png** - Om symbol logo for header
+1. **logo.png** - Hindu Digest logo for header
+2. **ganesh home screen.png** - Lord Ganesha image for hero section
+3. **Durga Mata.jpg** - Durga Mata image for teachings section
+4. **Dr. Karanam Aravinda Rao.png** - Dr. Rao's portrait for profile section
 
 See [SETUP_GUIDE.md](./SETUP_GUIDE.md) for detailed instructions.
 
