@@ -1,0 +1,22 @@
+import backgroundImage from 'figma:asset/85ff7db516b26ddf5063cb234b362f7182d91c74.png';
+
+export function TraditionalBackground() {
+  return (
+    <div className="fixed inset-0 -z-10 overflow-hidden">
+      {/* Main decorative background image */}
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage: `url('${backgroundImage}')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
+        }}
+      />
+
+      {/* Subtle white overlay for readability */}
+      <div className="absolute inset-0 bg-white/40"></div>
+    </div>
+  );
+}
