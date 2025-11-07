@@ -26,7 +26,7 @@ export function Header({ onBasketClick }: HeaderProps) {
             <h1 className="text-2xl md:text-3xl bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent tracking-wide">
               Hindu Digest
             </h1>
-            <p className="text-xs md:text-sm text-amber-700 italic hidden sm:block">
+            <p className="text-xs md:text-sm text-black italic hidden sm:block">
               Dharma • Bhakti • Sanskar
             </p>
           </div>

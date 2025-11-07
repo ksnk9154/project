@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "motion/react";
 import { Book, Video, FileText, Music, MessageCircle, Youtube } from "lucide-react";
 import { ContactForm } from "./ContactForm";
@@ -10,88 +11,88 @@ interface ContentSectionProps {
 const wisdomQuotes = [
   {
     quote: "True understanding arises when wisdom and action flow together.",
-    author: "Dr. Karanam Aravinda Rao"
+    author: "Dr. Aravinda Rao Karanam"
   },
   {
     quote: "Dharma is not a set of rituals or beliefs, but the eternal law that upholds the universe and guides righteous living.",
-    author: "Dr. Karanam Aravinda Rao"
+    author: "Dr. Aravinda Rao Karanam"
   },
   {
     quote: "The wisdom of the Upanishads is not meant to be merely studied, but lived and experienced in daily life.",
-    author: "Dr. Karanam Aravinda Rao"
+    author: "Dr. Aravinda Rao Karanam"
   }
 ];
 
 const bhagavadGitaSlokas = [
   {
-    sanskrit: "या एनं वेत्ति हन्तारं यश्चैनं मन्यते हतम्।\nउभौ तौ न विजानीतो नायं हन्ति न हन्यते ॥ २-१९॥",
+    sanskrit: "य एनं वेत्ति हन्तारं यश्चैनं मन्यते हतम्।\nउभौ तौ न विजानीतो नायं हन्ति न हन्यते \"॥ २-१९॥\"",
     transliteration: "ya enam vetti hantārām yaścainaṁ manyate hatam,\nubhau tau na vijānīto nāyaṁ hanti na hanyate .. 2-19..",
     translation: "One who considers this jiva as the slayer and one who considers it as slain are both incorrect. This jiva neither kills nor gets killed.",
     explanation: "The essential nature of jiva is consciousness which is eternal. The body may get killed but consciousness never ceases to exist.",
-    source: "The Bhagavad Gita for A Modern Student by Dr. K. Aravinda Rao"
+    source: "The Bhagavad Gita for A Modern Student by Dr. Aravinda Rao Karanam"
   },
   {
-    sanskrit: "मयि सर्वाणि कर्माणि संन्यस्याध्यात्मचेतसा।\nनिर्शीरनिर्ममो भूत्वा युध्यस्व विगतज्वः : ॥ ३-३० ॥",
+    sanskrit: "मयि सर्वाणि कर्माणि संन्यस्याध्यात्मचेतसा।\nनिर्शीरनिर्ममो भूत्वा युध्यस्व विगतज्वः \"॥ ३-३० ॥\"",
     transliteration: "māyi sarvāṇi karmāṇi samnyasyādhyātma-cetasā\nnirāśīr-nirmamo bhūtvā yudhyasva vigata-jvaraḥ .. 3-30..",
     translation: "Do your fight, surrendering all actions to me (performing ethical duties as ordained), with your attention on the nature of Self, with no expectation or attachment, and without feverishness (anxiety).",
-    source: "The Bhagavad Gita for A Modern Student by Dr. K. Aravinda Rao"
+    source: "The Bhagavad Gita for A Modern Student by Dr. Aravinda Rao Karanam"
   },
   {
-    sanskrit: "न कर्मणामनारम्भान्नैष्कर्म्यं पुरुषोऽश्नुते।\nन च संन्यासनादेव सिद्धिं समधिगच्छति ॥ ३-४ ॥",
+    sanskrit: "न कर्मणामनारम्भान्नैष्कर्म्यं पुरुषोऽश्नुते।\nन च संन्यासनादेव सिद्धिं समधिगच्छति \"॥ ३-४ ॥\"",
     transliteration: "na karmaṇāṁ-anārambhān-naiṣkarmyaṁ puruṣo'śnute .\nna ca samnyāsanād-eva siddhiṁ sam-adhigacchati .. 3-4..",
     translation: "A person would not attain an actionless state by merely abandoning duty. He would not attain fulfillment by renouncing work.",
-    source: "The Bhagavad Gita for A Modern Student by Dr. K. Aravinda Rao"
+    source: "The Bhagavad Gita for A Modern Student by Dr. Aravinda Rao Karanam"
   },
   {
-    sanskrit: "कर्मजं बुद्धियुक्ता हि फलं त्यक्त्वा मनीषिणः।\nजन्मबन्धविनिर्मुक्ताः पदं गच्छन्त्यानामयम् ॥ २-५१ ॥",
+    sanskrit: "कर्मजं बुद्धियुक्ता हि फलं त्यक्त्वा मनीषिणः।\nजन्मबन्धविनिर्मुक्ताः पदं गच्छन्त्यानामयम् \"॥ २-५१ ॥\"",
     transliteration: "karmajaṁ buddhi-yuktā hi phalaṁ tyaktvā maniṣiṇaḥ .\njanma-bandha-vinirmuktāḥ padaṁ gacchanty-anāmayam .. 2-51..",
     translation: "Wise men, possessing evenness of mind, having given up the fruit of karma, get freed from the bond of birth (and death) and attain the state which is beyond sorrow.",
-    source: "The Bhagavad Gita for A Modern Student by Dr. K. Aravinda Rao"
+    source: "The Bhagavad Gita for A Modern Student by Dr. Aravinda Rao Karanam"
   },
   {
-    sanskrit: "उद्धरेदात्मनात्मानं नात्मानमवसादयेत्।\nआत्मैव ह्यात्मनो बन्धुरात्मैव रिपुरात्मनः ॥ ६-५ ॥",
+    sanskrit: "उद्धरेदात्मनात्मानं नात्मानमवसादयेत्।\nआत्मैव ह्यात्मनो बन्धुरात्मैव रिपुरात्मनः \"॥ ६-५ ॥\"",
     transliteration: "uddhared-ātmanātmānaṁ nātmānam-avasādayet .\nātmaiva hyātmano bandhur-ātmaiva ripur-ātmanaḥ .. 6-5..",
     translation: "One should uplift oneself by one's own self and one should not weaken the self. It is because, the self is the friend of the self and the self is the enemy of oneself.",
-    source: "The Bhagavad Gita for A Modern Student by Dr. K. Aravinda Rao"
+    source: "The Bhagavad Gita for A Modern Student by Dr. Aravinda Rao Karanam"
   },
   {
-    sanskrit: "श्रेयान्स्वधर्मो विगुणः परधर्मात्स्वनुष्ठितात्।\nस्वभावनियतं कर्म कुर्वन्नाप्नोति किल्बिषम् ॥ १८-४७ ॥",
+    sanskrit: "श्रेयान्स्वधर्मो विगुणः परधर्मात्स्वनुष्ठितात्।\nस्वभावनियतं कर्म कुर्वन्नाप्नोति किल्बिषम् \"॥ १८-४७ ॥\"",
     transliteration: "śreyān-svadharmo viguṇaḥ para-dharmāt-svanuṣṭhitāt .\nsvabhāva-niyataṁ karma kurvann-āpnoti kilbiṣam .. 18-47..",
     translation: "One's own dharma, though devoid of excellence, is better for a person than someone else's dharma well observed. A person does not attain sin by performing karma (duty) determined by his nature.",
-    source: "The Bhagavad Gita for A Modern Student by Dr. K. Aravinda Rao"
+    source: "The Bhagavad Gita for A Modern Student by Dr. Aravinda Rao Karanam"
   },
   {
-    sanskrit: "विषया विनिवर्तन्ते निराहारस्य देहिनः।\nरसवर्जं रसोऽप्यस्य परं दृष्ट्वा निवर्तते ॥ २-५९ ॥",
+    sanskrit: "विषया विनिवर्तन्ते निराहारस्य देहिनः।\nरसवर्जं रसोऽप्यस्य परं दृष्ट्वा निवर्तते \"॥ २-५९ ॥\"",
     transliteration: "viṣayā vinivartante nirāhārasya dehinaḥ .\nrasa-varjaṁ raso'pyasya paraṁ dṛṣṭvā nivartate .. 2-59..",
     translation: "Sense objects withdraw when the person withdraws from them but the desire for them lingers. Such desire too retreats when the Supreme Truth is realized.",
-    source: "The Bhagavad Gita for A Modern Student by Dr. K. Aravinda Rao"
+    source: "The Bhagavad Gita for A Modern Student by Dr. Karanam Aravinda Rao"
   }
 ];
 
 const booksByDrRao = [
   {
     title: "The Bhagavad Gita for A Modern Student",
-    author: "Dr. K. Aravinda Rao",
+    author: "Dr. Aravinda Rao Karanam",
     description: "A comprehensive modern commentary on the Bhagavad Gita, making ancient wisdom accessible to contemporary readers."
   },
   {
     title: "Bhagawadgeetha Manakem Cheputhondi",
-    author: "Dr. K. Aravinda Rao",
+    author: "Dr. Aravinda Rao Karanam",
     description: "Telugu language exploration of the Bhagavad Gita's teachings and their relevance to modern life."
   },
   {
     title: "Indic Religions Challenges for Survival",
-    author: "Dr. K. Aravinda Rao",
+    author: "Dr. Aravinda Rao Karanam",
     description: "An analysis of the contemporary challenges facing Indic religions and pathways for preservation."
   },
   {
     title: "How to Teach Hinduism to Your Child?",
-    author: "Dr. K. Aravinda Rao",
+    author: "Dr. Aravinda Rao Karanam",
     description: "A practical guide for parents to introduce Hindu philosophy and values to children."
   },
   {
     title: "Bharatiya Mataalu Desha Badrata Edurkontunna Savallu",
-    author: "Dr. K. Aravinda Rao",
+    author: "Dr. Aravinda Rao Karanam",
     description: "Telugu language work addressing challenges facing Indian religions and cultural survival."
   }
 ];
@@ -114,11 +115,11 @@ const sectionContent: Record<
     quote: wisdomQuotes[0]
   },
   "dr-aravinda-rao": {
-    title: "Dr. Karanam Aravinda Rao",
+    title: "Dr. Aravinda Rao Karanam",
     description:
-      "Dr. Karanam Aravinda Rao is a retired Director General of Police (DGP) of united Andhra Pradesh, an author and a leading speaker on Sanatana Dharma and Advaita Vedanta.",
+      "Dr. Aravinda Rao Karanam is a retired Director General of Police (DGP) of united Andhra Pradesh, an author and a leading speaker on Sanatana Dharma and Advaita Vedanta.",
     showImage: true,
-    imageUrl: "/images/Dr. Karanam Aravinda Rao.jpg",
+    imageUrl: "/images/Dr. Aravinda Rao Karanam.jpg",
     quote: wisdomQuotes[1]
   },
   "about-hindu-digest": {
@@ -139,17 +140,12 @@ const sectionContent: Record<
   "articles-main": {
     title: "Articles on Hindu Philosophy",
     description: "Explore our comprehensive collection of articles on Sanatana Dharma.",
-    icon: <FileText className="w-16 h-16 text-orange-500" />,
-  },
-  "writings-dr-rao": {
-    title: "Writings by Dr. Karanam Aravinda Rao",
-    description: "Read profound insights from Dr. Aravinda Rao on Vedanta and Hindu philosophy.",
-    icon: <FileText className="w-16 h-16 text-orange-500" />,
+    icon: <FileText className="w-16 h-16 text-black" />,
   },
   "teachings": {
     title: "Teachings & Wisdom Quotes",
     description:
-      "These carefully selected quotes from Dr. Aravinda Rao's teachings offer concentrated wisdom on Dharma, Karma, Bhakti, and the path to self-realization. Each quote invites deep contemplation and can serve as a guide for righteous living.",
+      "These carefully selected quotes from Dr. Karanam Aravinda Rao's teachings offer concentrated wisdom on Dharma, Karma, Bhakti, and the path to self-realization. Each quote invites deep contemplation and can serve as a guide for righteous living.",
     showImage: true,
     imageUrl: "/images/wisdom.jpg"
   },
@@ -157,12 +153,12 @@ const sectionContent: Record<
     title: "Community Articles",
     description:
       "Read personal reflections and insights from students and practitioners of Hindu philosophy. These submissions reflect individual journeys of spiritual growth and offer diverse perspectives on applying Vedantic principles and Dharmic values in daily life.",
-    icon: <FileText className="w-16 h-16 text-orange-500" />,
+    icon: <FileText className="w-16 h-16 text-black" />,
   },
   "talks-interviews": {
     title: "Talks & Interviews",
     description:
-      "Listen to penetrating dialogues where Dr. Aravinda Rao responds to fundamental questions about existence, consciousness, and reality. These conversations reveal the spontaneous wisdom that flows when understanding is present, covering topics from the nature of enlightenment to practical questions about daily living.",
+      "Listen to penetrating dialogues where Dr. Aravinda Rao Karanam responds to fundamental questions about existence, consciousness, and reality. These conversations reveal the spontaneous wisdom that flows when understanding is present, covering topics from the nature of enlightenment to practical questions about daily living.",
     showImage: true,
     imageUrl: "/images/meditation.jpg"
   },
@@ -177,14 +173,14 @@ const sectionContent: Record<
   "media-clips": {
     title: "Media Clips",
     description:
-      "Watch short excerpts from Dr. Aravinda Rao's lectures and discourses. These clips capture key teachings on various topics including Karma Yoga, Bhakti, Dharma, and the nature of the Self.",
-    icon: <Video className="w-16 h-16 text-orange-500" />,
+      "Watch short excerpts from Dr. Karanam Aravinda Rao's lectures and discourses. These clips capture key teachings on various topics including Karma Yoga, Bhakti, Dharma, and the nature of the Self.",
+    icon: <Video className="w-16 h-16 text-black" />,
   },
   "bhakti-music": {
     title: "Bhakti Music",
     description:
       "Experience the transformative power of devotional music and sacred chants. Our collection includes traditional bhajans, kirtans, and contemplative pieces that create an atmosphere conducive to spiritual practice and inner stillness.",
-    icon: <Music className="w-16 h-16 text-orange-500" />,
+    icon: <Music className="w-16 h-16 text-black" />,
     showImage: true,
     imageUrl: "/images/music.jpg"
   },
@@ -194,30 +190,30 @@ const sectionContent: Record<
       "Support Hindu Digest's mission while enriching your spiritual library. Our shop features books, audio lectures, and video courses by Dr. Karanam Aravinda Rao covering various aspects of Hindu philosophy, Vedanta, Sanskrit, and spiritual practice.",
   },
   "books": {
-    title: "Books by Dr. Aravinda Rao",
+    title: "Books by Dr. Aravinda Rao Karanam",
     description:
-      "Discover comprehensive books on Vedanta, Advaita philosophy, and Hindu thought authored by Dr. Karanam Aravinda Rao. Key titles include: 'How to Teach Hinduism to Your Child?', 'Indic Religions: Challenges for Survival', 'Bhagavadgeetha Manakem Chebutondi?', and 'Analysis of Jnanam in the Upanishads' (Ph.D. thesis). Available in English and Telugu.",
-    icon: <Book className="w-16 h-16 text-orange-500" />,
+      "Discover comprehensive books on Vedanta, Advaita philosophy, and Hindu thought authored by Dr. Aravinda Rao Karanam. Key titles include: 'How to Teach Hinduism to Your Child?', 'Indic Religions: Challenges for Survival', 'Bhagavadgeetha Manakem Chebutondi?', and 'Analysis of Jnanam in the Upanishads' (Ph.D. thesis). Available in English and Telugu.",
+    icon: <Book className="w-16 h-16 text-black" />,
     showImage: true,
     imageUrl: "/images/books.jpg"
   },
   "audio": {
     title: "Audio Lectures",
     description:
-      "Listen to Dr. Aravinda Rao's recorded lectures on various aspects of Hindu philosophy and Vedanta. Available in CD and MP3 formats. Our audio collection includes systematic studies of key texts, topical discussions, and guided contemplations.",
-    icon: <Music className="w-16 h-16 text-orange-500" />,
+      "Listen to Dr. Karanam Aravinda Rao's recorded lectures on various aspects of Hindu philosophy and Vedanta. Available in CD and MP3 formats. Our audio collection includes systematic studies of key texts, topical discussions, and guided contemplations.",
+    icon: <Music className="w-16 h-16 text-black" />,
   },
   "video": {
     title: "Video Collection",
     description:
-      "Experience the complete atmosphere of Dr. Aravinda Rao's teachings through our video collection. Available in DVD and streaming formats. These comprehensive courses cover the Bhagavad Gita, major Upanishads, and fundamental concepts of Vedanta.",
-    icon: <Video className="w-16 h-16 text-orange-500" />,
+      "Experience the complete atmosphere of Dr. Karanam Aravinda Rao's teachings through our video collection. Available in DVD and streaming formats. These comprehensive courses cover the Bhagavad Gita, major Upanishads, and fundamental concepts of Vedanta.",
+    icon: <Video className="w-16 h-16 text-black" />,
   },
   "qa": {
     title: "Q&A",
     description:
-      "Explore our extensive archive of questions on Hindu philosophy and Dr. Aravinda Rao's responses. Topics cover everything from basic concepts of Dharma to advanced Vedantic philosophy. Submit your own questions for consideration.",
-    icon: <MessageCircle className="w-16 h-16 text-orange-500" />,
+      "Explore our extensive archive of questions on Hindu philosophy and Dr. Karanam Aravinda Rao's responses. Topics cover everything from basic concepts of Dharma to advanced Vedantic philosophy. Submit your own questions for consideration.",
+    icon: <MessageCircle className="w-16 h-16 text-black" />,
   },
   "contact": {
     title: "Contact Hindu Digest",
@@ -233,7 +229,7 @@ const sectionContent: Record<
 export function ContentSection({ section }: ContentSectionProps) {
   const content = sectionContent[section] || sectionContent.home;
 
-  // Special handling for Dr. Aravinda Rao profile page
+  // Special handling for Dr. Karanam Aravinda Rao profile page
   if (section === "dr-aravinda-rao") {
     return (
       <motion.div
@@ -249,15 +245,15 @@ export function ContentSection({ section }: ContentSectionProps) {
               <div className="relative w-40 h-40 mx-auto rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-white flex items-center justify-center">
                 <img
                   src="/images/dr-aravinda-rao.jpg"
-                  alt="Dr. Karanam Aravinda Rao"
+                  alt="Dr. Aravinda Rao Karanam"
                   className="w-full h-full object-contain bg-white"
                 />
               </div>
             </div>
             <div className="md:col-span-2 space-y-4">
-              <h1 className="text-4xl text-amber-900">Dr. Karanam Aravinda Rao</h1>
-              <p className="text-xl text-amber-800">
-                Dr. Karanam Aravinda Rao is a retired Director General of Police (DGP) of united Andhra Pradesh, 
+              <h1 className="text-4xl text-black">Dr. Aravinda Rao Karanam</h1>
+              <p className="text-xl text-black">
+                Dr. Aravinda Rao Karanam is a retired Director General of Police (DGP) of united Andhra Pradesh,
                 an author and a leading speaker on Sanatana Dharma and Advaita Vedanta.
               </p>
             </div>
@@ -265,7 +261,7 @@ export function ContentSection({ section }: ContentSectionProps) {
 
           {/* Content sections */}
           <div className="space-y-8">
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl border border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] p-8 transition-all duration-500 hover:bg-white/20">
+            <div className="bg-white/60 backdrop-blur-sm rounded-3xl border-2 border-orange-300/50 shadow-xl p-8">
               <h2 className="text-2xl text-amber-900 mb-4">Career in Indian Police Service (IPS)</h2>
               <ul className="space-y-2 text-amber-800 list-disc list-inside">
                 <li>Served 34 years in the IPS (1977–2011)</li>
@@ -275,7 +271,7 @@ export function ContentSection({ section }: ContentSectionProps) {
               </ul>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl border border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] p-8 transition-all duration-500 hover:bg-white/20">
+            <div className="bg-white/60 backdrop-blur-sm rounded-3xl border-2 border-orange-300/50 shadow-xl p-8">
               <h2 className="text-2xl text-amber-900 mb-4">Philosophical & Academic Pursuits</h2>
               <ul className="space-y-2 text-amber-800 list-disc list-inside">
                 <li>Holds a Ph.D. in Sanskrit; author of Analysis of Jnanam in the Upanishads</li>
@@ -284,7 +280,7 @@ export function ContentSection({ section }: ContentSectionProps) {
               </ul>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl border border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] p-8 transition-all duration-500 hover:bg-white/20">
+            <div className="bg-white/60 backdrop-blur-sm rounded-3xl border-2 border-orange-300/50 shadow-xl p-8">
               <h2 className="text-2xl text-amber-900 mb-4">Publications & Selected Works</h2>
               <ul className="space-y-2 text-amber-800 list-disc list-inside">
                 <li><em>How to Teach Hinduism to Your Child?</em></li>
@@ -294,7 +290,7 @@ export function ContentSection({ section }: ContentSectionProps) {
               </ul>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl border border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] p-8 transition-all duration-500 hover:bg-white/20">
+            <div className="bg-white/60 backdrop-blur-sm rounded-3xl border-2 border-orange-300/50 shadow-xl p-8">
               <h2 className="text-2xl text-amber-900 mb-4">Online & Public Presence</h2>
               <p className="text-amber-800 mb-4">
                 Educator at <a href="https://sanskritfromhome.org" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:underline">sanskritfromhome.org</a> and contributor to Indica Today.
@@ -340,11 +336,11 @@ export function ContentSection({ section }: ContentSectionProps) {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <Youtube className="w-16 h-16 text-red-600 mx-auto mb-4" />
-            <h2 className="text-3xl md:text-4xl text-amber-900 mb-4">
+            <h2 className="text-3xl md:text-4xl text-black mb-4">
               Videos & YouTube Channel
             </h2>
             <div className="w-24 h-1 bg-orange-500 mx-auto mb-6" />
-            <p className="text-xl text-amber-800 max-w-3xl mx-auto">
+            <p className="text-xl text-black max-w-3xl mx-auto">
               {content.description}
             </p>
           </div>
@@ -436,7 +432,7 @@ export function ContentSection({ section }: ContentSectionProps) {
             </h2>
             <div className="w-24 h-1 bg-orange-500 mx-auto mb-6" />
             <p className="text-lg text-amber-800 max-w-2xl mx-auto mb-8">
-              Explore our extensive archive of questions on Hindu philosophy and Dr. Aravinda Rao's responses. 
+              Explore our extensive archive of questions on Hindu philosophy and Dr. Karanam Aravinda Rao's responses. 
               We also welcome your inquiries about our teachings, programs, and resources.
             </p>
           </div>
@@ -457,44 +453,44 @@ export function ContentSection({ section }: ContentSectionProps) {
       >
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl text-amber-900 mb-6">About Hindu Digest</h1>
+              <h1 className="text-4xl md:text-5xl text-black mb-6">About Hindu Digest</h1>
             <div className="w-24 h-1 bg-orange-500 mx-auto mb-8" />
           </div>
 
           <div className="space-y-8">
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl border border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] p-8 transition-all duration-500 hover:bg-white/20">
-              <h2 className="text-2xl text-amber-900 mb-4">Overview</h2>
-              <p className="text-amber-800 mb-4">
-                Karanam Aravinda Rao is a retired DGP of Andhra Pradesh, scholar of Sanskrit and Vedanta.
+            <div className="bg-white/60 backdrop-blur-sm rounded-3xl border-2 border-orange-300/50 shadow-xl p-8">
+              <h2 className="text-2xl text-black mb-4">Overview</h2>
+              <p className="text-black mb-4">
+                Aravinda Rao Karanam is a retired DGP of Andhra Pradesh, scholar of Sanskrit and Vedanta.
               </p>
-              <p className="text-amber-800 mb-4">
+              <p className="text-black mb-4">
                 He delivers a number of video-series on YouTube under themes like: "Basic Course on Hinduism",
                 "Understanding Hinduism", "Advaita Concepts".
               </p>
-              <p className="text-amber-800">
+              <p className="text-black">
                 On the site "SaveTemples.org" there is a category labelled Hindu Digest which collects articles
                 and posts about Hindu traditions, temple preservation etc.
               </p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl border border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] p-8 transition-all duration-500 hover:bg-white/20">
-              <h2 className="text-2xl text-amber-900 mb-4">What "Hindu Digest" Means</h2>
-              <p className="text-amber-800 mb-4">
+            <div className="bg-white/60 backdrop-blur-sm rounded-3xl border-2 border-orange-300/50 shadow-xl p-8">
+              <h2 className="text-2xl text-black mb-4">What "Hindu Digest" Means</h2>
+              <p className="text-black mb-4">
                 In the context of his work, Hindu Digest refers to digest-style summarised content about
                 Hindu philosophy, practice, heritage, and culture.
               </p>
-              <p className="text-amber-800 mb-4">
+              <p className="text-black mb-4">
                 The "SaveTemples.org" portal lists "Category: Hindu Digest" where articles like temple-protection,
                 Hindu children's education abroad, and cultural matters are posted.
               </p>
-              <p className="text-amber-800">
+              <p className="text-black">
                 On his YouTube talks, though they may not be labeled exactly "Hindu Digest", many cover broad
                 themes of Hinduism (e.g., "Understanding Hinduism-01"), which serve a similar digest/overview role.
               </p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl border border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] p-8 transition-all duration-500 hover:bg-white/20">
-              <h2 className="text-2xl text-amber-900 mb-4">Key Themes & Topics</h2>
+            <div className="bg-white/60 backdrop-blur-sm rounded-3xl border-2 border-orange-300/50 shadow-xl p-8">
+              <h2 className="text-2xl text-black mb-4">Key Themes & Topics</h2>
               <ul className="space-y-3 text-amber-800">
                 <li className="flex gap-3">
                   <span className="text-orange-500">•</span>
@@ -513,8 +509,8 @@ export function ContentSection({ section }: ContentSectionProps) {
               </ul>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl border border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] p-8 transition-all duration-500 hover:bg-white/20">
-              <h2 className="text-2xl text-amber-900 mb-4">Why This is Useful</h2>
+            <div className="bg-white/60 backdrop-blur-sm rounded-3xl border-2 border-orange-300/50 shadow-xl p-8">
+              <h2 className="text-2xl text-black mb-4">Why This is Useful</h2>
               <ul className="space-y-3 text-amber-800">
                 <li className="flex gap-3">
                   <span className="text-orange-500">•</span>
@@ -534,8 +530,8 @@ export function ContentSection({ section }: ContentSectionProps) {
               </ul>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl border border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] p-8 transition-all duration-500 hover:bg-white/20">
-              <h2 className="text-2xl text-amber-900 mb-4">How to Use it Effectively</h2>
+            <div className="bg-white/60 backdrop-blur-sm rounded-3xl border-2 border-orange-300/50 shadow-xl p-8">
+              <h2 className="text-2xl text-black mb-4">How to Use it Effectively</h2>
               <ul className="space-y-3 text-amber-800">
                 <li className="flex gap-3">
                   <span className="text-orange-500">•</span>
@@ -560,7 +556,7 @@ export function ContentSection({ section }: ContentSectionProps) {
             </div>
 
             <div className="bg-gradient-to-r from-orange-100/80 to-amber-100/80 rounded-2xl p-8 shadow-lg text-center">
-              <h3 className="text-2xl text-amber-900 mb-4">Featured Introduction Video</h3>
+              <h3 className="text-2xl text-black mb-4">Featured Introduction Video</h3>
               <div className="aspect-video max-w-3xl mx-auto bg-white/60 rounded-xl overflow-hidden shadow-lg border-2 border-orange-300/50">
                 <iframe
                   width="100%"
@@ -591,7 +587,7 @@ export function ContentSection({ section }: ContentSectionProps) {
     );
   }
 
-  // Special handling for Writings by Dr. Aravinda Rao
+  // Special handling for Writings by Dr. Karanam Aravinda Rao
   if (section === "writings-dr-rao") {
     return (
       <motion.div
@@ -603,12 +599,12 @@ export function ContentSection({ section }: ContentSectionProps) {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <Book className="w-16 h-16 text-orange-500 mx-auto mb-4" />
-            <h2 className="text-3xl md:text-4xl text-amber-900 mb-4">
-              Books by Dr. Karanam Aravinda Rao
+            <h2 className="text-3xl md:text-4xl text-black mb-4">
+              Books by Dr. Aravinda Rao Karanam
             </h2>
             <div className="w-24 h-1 bg-orange-500 mx-auto mb-6" />
-            <p className="text-xl text-amber-800 max-w-3xl mx-auto">
-              Explore comprehensive works on Vedanta, Advaita philosophy, and Hindu thought by Dr. Aravinda Rao
+            <p className="text-xl text-black max-w-3xl mx-auto">
+              Explore comprehensive works on Vedanta, Advaita philosophy, and Hindu thought by Dr. Aravinda Rao Karanam
             </p>
           </div>
 
@@ -620,17 +616,17 @@ export function ContentSection({ section }: ContentSectionProps) {
               >
                 <div className="flex items-start gap-4 mb-4">
                   <Book className="w-8 h-8 text-orange-500 flex-shrink-0 mt-1" />
-                  <h3 className="text-xl text-amber-900">{book.title}</h3>
+                  <h3 className="text-xl text-black">{book.title}</h3>
                 </div>
                 <p className="text-sm text-orange-600 mb-3">by {book.author}</p>
-                <p className="text-amber-800 leading-relaxed">{book.description}</p>
+                <p className="text-black leading-relaxed">{book.description}</p>
               </div>
             ))}
           </div>
 
           <div className="mt-12 text-center bg-gradient-to-r from-orange-100/80 to-amber-100/80 rounded-2xl p-8 shadow-lg">
-            <h3 className="text-2xl text-amber-900 mb-4">Get These Books</h3>
-            <p className="text-amber-800 mb-6">
+            <h3 className="text-2xl text-black mb-4">Get These Books</h3>
+            <p className="text-black mb-6">
               Visit our shop to purchase these insightful works and deepen your understanding of Sanatana Dharma
             </p>
             <button className="px-8 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors shadow-lg">
@@ -654,12 +650,12 @@ export function ContentSection({ section }: ContentSectionProps) {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <Book className="w-16 h-16 text-orange-500 mx-auto mb-4" />
-            <h2 className="text-3xl md:text-4xl text-amber-900 mb-4">
-              Books by Dr. Aravinda Rao
+            <h2 className="text-3xl md:text-4xl text-black mb-4">
+              Books by Dr. Aravinda Rao Karanam
             </h2>
             <div className="w-24 h-1 bg-orange-500 mx-auto mb-6" />
-            <p className="text-xl text-amber-800 max-w-3xl mx-auto">
-              Discover comprehensive books on Vedanta, Advaita philosophy, and Hindu thought. 
+            <p className="text-xl text-black max-w-3xl mx-auto">
+              Discover comprehensive books on Vedanta, Advaita philosophy, and Hindu thought.
               Available in English and Telugu.
             </p>
           </div>
@@ -672,10 +668,10 @@ export function ContentSection({ section }: ContentSectionProps) {
               >
                 <div className="flex items-start gap-4 mb-4">
                   <Book className="w-8 h-8 text-orange-500 flex-shrink-0 mt-1" />
-                  <h3 className="text-xl text-amber-900">{book.title}</h3>
+                  <h3 className="text-xl text-black">{book.title}</h3>
                 </div>
                 <p className="text-sm text-orange-600 mb-3">by {book.author}</p>
-                <p className="text-amber-800 leading-relaxed mb-4">{book.description}</p>
+                <p className="text-black leading-relaxed mb-4">{book.description}</p>
                 <button className="w-full px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors shadow">
                   Add to Basket
                 </button>
@@ -699,11 +695,11 @@ export function ContentSection({ section }: ContentSectionProps) {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <Youtube className="w-16 h-16 text-red-600 mx-auto mb-4" />
-            <h2 className="text-3xl md:text-4xl text-amber-900 mb-4">
+            <h2 className="text-3xl md:text-4xl text-black mb-4">
               Talks & Interviews
             </h2>
             <div className="w-24 h-1 bg-orange-500 mx-auto mb-6" />
-            <p className="text-xl text-amber-800 max-w-3xl mx-auto">
+            <p className="text-xl text-black max-w-3xl mx-auto">
               {content.description}
             </p>
           </div>
@@ -715,7 +711,7 @@ export function ContentSection({ section }: ContentSectionProps) {
                 width="100%"
                 height="100%"
                 src="https://www.youtube.com/embed/Q3tNA7Kjn1s"
-                title="Interview with Dr. Aravinda Rao"
+                title="Interview with Dr. Karanam Aravinda Rao"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -723,9 +719,9 @@ export function ContentSection({ section }: ContentSectionProps) {
               ></iframe>
             </div>
             <div className="p-6">
-              <h3 className="text-2xl text-amber-900 mb-3">Featured Interview</h3>
-              <p className="text-amber-800 mb-4">
-                Watch Dr. Aravinda Rao discuss the fundamentals of Hinduism and Vedanta philosophy
+              <h3 className="text-2xl text-black mb-3">Featured Interview</h3>
+              <p className="text-black mb-4">
+                Watch Dr. Karanam Aravinda Rao discuss the fundamentals of Hinduism and Vedanta philosophy
               </p>
               <a
                 href="https://www.youtube.com/watch?v=Q3tNA7Kjn1s"
@@ -741,8 +737,8 @@ export function ContentSection({ section }: ContentSectionProps) {
 
           {/* Call to Action */}
           <div className="text-center bg-gradient-to-r from-orange-100/80 to-amber-100/80 rounded-2xl p-8 shadow-lg">
-            <h3 className="text-2xl text-amber-900 mb-4">Explore More Talks</h3>
-            <p className="text-amber-800 mb-6">
+            <h3 className="text-2xl text-black mb-4">Explore More Talks</h3>
+            <p className="text-black mb-6">
               Visit our YouTube channel for a complete collection of talks, interviews, and discussions
             </p>
             <a
@@ -771,12 +767,12 @@ export function ContentSection({ section }: ContentSectionProps) {
       >
         <div className="max-w-5xl mx-auto relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl text-amber-900 mb-4">
+            <h2 className="text-3xl md:text-4xl text-black mb-4">
               Teachings from the Bhagavad Gita
             </h2>
             <div className="w-24 h-1 bg-orange-500 mx-auto mb-6" />
-            <p className="text-lg text-amber-800 max-w-3xl mx-auto">
-              Sacred verses from the Bhagavad Gita with translations and commentary by Dr. K. Aravinda Rao
+            <p className="text-lg text-black max-w-3xl mx-auto">
+              Sacred verses from the Bhagavad Gita with translations and commentary by Dr. Aravinda Rao Karanam
             </p>
           </div>
 
@@ -798,27 +794,27 @@ export function ContentSection({ section }: ContentSectionProps) {
               >
                 {/* Sanskrit Text */}
                 <div className="mb-4 p-4 bg-gradient-to-r from-orange-50 to-amber-50 rounded-lg">
-                  <p className="text-xl text-amber-900 whitespace-pre-line">
+                  <p className="text-xl text-black whitespace-pre-line">
                     {sloka.sanskrit}
                   </p>
                 </div>
-                
+
                 {/* Transliteration */}
                 <div className="mb-4">
                   <p className="text-orange-700 italic whitespace-pre-line">
                     {sloka.transliteration}
                   </p>
                 </div>
-                
+
                 {/* Translation */}
                 <div className="mb-4 p-4 bg-white/60 rounded-lg border-l-4 border-orange-500">
-                  <p className="text-amber-900">{sloka.translation}</p>
+                  <p className="text-black">{sloka.translation}</p>
                 </div>
-                
+
                 {/* Explanation if available */}
                 {sloka.explanation && (
                   <div className="mb-4">
-                    <p className="text-amber-800 italic">{sloka.explanation}</p>
+                    <p className="text-black italic">{sloka.explanation}</p>
                   </div>
                 )}
                 
@@ -832,9 +828,9 @@ export function ContentSection({ section }: ContentSectionProps) {
 
           {/* Call to Action */}
           <div className="mt-12 text-center bg-gradient-to-r from-orange-100/80 to-amber-100/80 rounded-2xl p-8 shadow-lg">
-            <h3 className="text-2xl text-amber-900 mb-4">Explore More Teachings</h3>
-            <p className="text-amber-800 mb-6">
-              Discover more wisdom from Dr. Aravinda Rao's teachings on the Bhagavad Gita and Vedanta
+            <h3 className="text-2xl text-black mb-4">Explore More Teachings</h3>
+            <p className="text-black mb-6">
+              Discover more wisdom from Dr. Karanam Aravinda Rao's teachings on the Bhagavad Gita and Vedanta
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
@@ -865,20 +861,20 @@ export function ContentSection({ section }: ContentSectionProps) {
       className="py-16 px-4 md:px-8 relative"
     >
       <div className="max-w-4xl mx-auto relative z-10">
-        <div className="text-center mb-8">
-          {content.icon && (
-            <div className="flex justify-center mb-4">{content.icon}</div>
-          )}
-          <h2 className="text-3xl md:text-4xl text-amber-900 mb-4">
-            {content.title}
-          </h2>
-          <div className="w-24 h-1 bg-orange-500 mx-auto mb-6" />
-        </div>
+          <div className="text-center mb-8">
+            {content.icon && (
+              <div className="flex justify-center mb-4">{content.icon}</div>
+            )}
+            <h2 className="text-3xl md:text-4xl text-black mb-4">
+              {content.title}
+            </h2>
+            <div className="w-24 h-1 bg-orange-500 mx-auto mb-6" />
+          </div>
 
-        <div className="space-y-6 bg-white/60 backdrop-blur-sm rounded-2xl p-8 shadow-xl border-2 border-orange-300/50">
-          <p className="text-lg text-amber-900 leading-relaxed">
-            {content.description}
-          </p>
+          <div className="space-y-6 bg-white/60 backdrop-blur-sm rounded-2xl p-8 shadow-xl border-2 border-orange-300/50">
+            <p className="text-lg text-black leading-relaxed">
+              {content.description}
+            </p>
 
           {content.showImage && content.imageUrl && (
             <div className="mt-8 rounded-lg overflow-hidden shadow-lg border-2 border-orange-300/50">
@@ -892,7 +888,7 @@ export function ContentSection({ section }: ContentSectionProps) {
 
           {content.quote && (
             <div className="mt-8 p-6 bg-gradient-to-r from-orange-100/80 to-amber-100/80 border-l-4 border-orange-500 rounded shadow-md">
-              <p className="text-amber-900 italic text-lg mb-2">
+              <p className="text-black italic text-lg mb-2">
                 "{content.quote.quote}"
               </p>
               <p className="text-orange-600">— {content.quote.author}</p>
@@ -903,7 +899,7 @@ export function ContentSection({ section }: ContentSectionProps) {
             <button className="px-6 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors shadow-lg">
               Explore More
             </button>
-            <button className="px-6 py-2 bg-white/90 text-amber-900 border-2 border-orange-400 rounded-lg hover:bg-orange-50 hover:border-orange-500 transition-colors shadow-lg">
+            <button className="px-6 py-2 bg-white/90 text-black border-2 border-orange-400 rounded-lg hover:bg-orange-50 hover:border-orange-500 transition-colors shadow-lg">
               Contact Us
             </button>
           </div>

@@ -76,11 +76,11 @@ export function Articles() {
     <div className="max-w-6xl mx-auto">
       <div className="text-center mb-12">
         <FileText className="w-16 h-16 text-orange-500 mx-auto mb-4" />
-        <h2 className="text-3xl md:text-4xl text-amber-900 mb-4">
+        <h2 className="text-3xl md:text-4xl text-black mb-4">
           Articles on Hindu Philosophy & Vedanta
         </h2>
         <div className="w-24 h-1 bg-orange-500 mx-auto mb-6" />
-        <p className="text-xl text-amber-800 max-w-3xl mx-auto">
+        <p className="text-xl text-black max-w-3xl mx-auto">
           Explore profound insights into Sanatana Dharma, Vedanta, and the timeless wisdom of Hindu philosophy through teachings by Dr. Karanam Aravinda Rao
         </p>
       </div>
@@ -99,10 +99,10 @@ export function Articles() {
               />
             </div>
             <div className="p-6">
-              <h3 className="text-xl text-amber-900 mb-3 line-clamp-2">
+              <h3 className="text-xl text-black mb-3 line-clamp-2">
                 {article.title}
               </h3>
-              <div className="flex items-center gap-4 text-sm text-amber-700 mb-3">
+              <div className="flex items-center gap-4 text-sm text-black mb-3">
                 <div className="flex items-center gap-1">
                   <User className="w-4 h-4" />
                   <span className="line-clamp-1">{article.author}</span>
@@ -112,7 +112,7 @@ export function Articles() {
                   <span>{article.date}</span>
                 </div>
               </div>
-              <p className="text-amber-800 mb-4 line-clamp-3">
+              <p className="text-black mb-4 line-clamp-3">
                 {article.content}
               </p>
               <div className="flex gap-2">
@@ -138,10 +138,10 @@ export function Articles() {
       </div>
 
       <div className="mt-12 p-8 bg-gradient-to-r from-orange-100/80 to-amber-100/80 border-l-4 border-orange-500 rounded-lg shadow-md">
-        <h3 className="text-2xl text-amber-900 mb-4">
+        <h3 className="text-2xl text-black mb-4">
           "Dharma sustains the world, protects those who uphold it, and leads to the ultimate good."
         </h3>
-        <p className="text-amber-800 italic">
+        <p className="text-black italic">
           — Ancient Hindu wisdom, as taught by Dr. Karanam Aravinda Rao
         </p>
       </div>
