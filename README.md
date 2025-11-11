@@ -1,6 +1,6 @@
 # Hindu Digest Website
 
-A beautiful, fully offline-capable website for Hindu Digest - spreading the timeless wisdom of Sanatana Dharma through the teachings of Dr. Karanam Aravinda Rao.
+A beautiful, fully offline-capable website for Hindu Digest - spreading the timeless wisdom of Sanatana Dharma through the teachings of Dr. Aravinda Rao Karanam.
 
 ## 🚀 Quick Start
 
@@ -57,7 +57,7 @@ npm run preview
 
 ## 🙏 About
 
-Hindu Digest is dedicated to sharing the timeless wisdom of Sanatana Dharma through authentic teachings of Vedanta and Hindu philosophy by Dr. Karanam Aravinda Rao.
+Hindu Digest is dedicated to sharing the timeless wisdom of Sanatana Dharma through authentic teachings of Vedanta and Hindu philosophy by Dr. Aravinda Rao Karanam.
 
 **Tagline:** Dharma • Bhakti • Sanskar
 

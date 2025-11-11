@@ -14,7 +14,7 @@ interface MenuItem {
 
 const menuItems: MenuItem[] = [
   { label: "Home", id: "home" },
-  { label: "Dr. Karanam Aravinda Rao", id: "dr-aravinda-rao" },
+  { label: "Dr. Aravinda Rao Karanam", id: "dr-aravinda-rao" },
   {
     label: "Hindu Digest",
     id: "hindu-digest",
@@ -28,7 +28,7 @@ const menuItems: MenuItem[] = [
     children: [
       { label: "Videos", id: "videos" },
       { label: "Articles", id: "articles-main" },
-      { label: "Writings by Dr. Aravinda Rao", id: "writings-dr-rao" },
+      // { label: "Writings by Dr. Aravinda Rao", id: "writings-dr-rao" },
       { label: "Teachings", id: "teachings" },
       { label: "Talks & Interviews", id: "talks-interviews" },
     ],
@@ -40,7 +40,7 @@ const menuItems: MenuItem[] = [
       { label: "Books", id: "books" },
     ],
   },
-  { label: "Q&A & Contact", id: "contact" },
+  { label: "Contact Us", id: "contact" },
 ];
 
 export function Navigation({ onNavigate, activeSection }: NavigationProps) {

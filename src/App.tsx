@@ -32,7 +32,7 @@ export default function App() {
       <MobileNav onNavigate={handleNavigate} activeSection={activeSection} />
 
       {/* Hero Section - Only show on home */}
-      {showHero && <Hero />}
+      {showHero && <Hero onNavigate={handleNavigate} />}
 
       {/* Main Content */}
       <main className="flex-1 relative z-0">
@@ -40,7 +40,7 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <Footer />
+      <Footer onNavigate={handleNavigate} />
     </div>
   );
 }

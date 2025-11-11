@@ -99,7 +99,7 @@ All slokas include:
 
 ```
 Home
-Dr. Karanam Aravinda Rao
+Dr. Aravinda Rao Karanam
 Hindu Digest
   └─ About Hindu Digest
 News

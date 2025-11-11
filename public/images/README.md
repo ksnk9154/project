@@ -29,7 +29,7 @@ These images are essential for the site to display correctly:
 These images enhance specific content pages. If not provided, pages will still function but without decorative images:
 
 ### 4. dr-aravinda-rao.jpg
-- **Description:** Professional photo of Dr. Karanam Aravinda Rao
+- **Description:** Professional photo of Dr. Aravinda Rao Karanam
 - **Usage:** Dr. Aravinda Rao profile page
 - **Recommended Size:** 400x500 pixels (portrait orientation)
 - **Format:** JPG or PNG

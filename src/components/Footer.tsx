@@ -1,4 +1,8 @@
-export function Footer() {
+interface FooterProps {
+  onNavigate: (section: string) => void;
+}
+
+export function Footer({ onNavigate }: FooterProps) {
   return (
     <footer className="bg-gray-800 text-white py-12 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
@@ -8,7 +12,7 @@ export function Footer() {
             <h3 className="mb-4 text-orange-500">About Hindu Digest</h3>
             <p className="text-gray-300">
               Hindu Digest is dedicated to sharing the timeless wisdom of Sanatana Dharma 
-              through authentic teachings of Vedanta and Hindu philosophy by Dr. Karanam Aravinda Rao.
+              through authentic teachings of Vedanta and Hindu philosophy by Dr. Aravinda Rao Karanam.
             </p>
           </div>
 
@@ -17,24 +21,36 @@ export function Footer() {
             <h3 className="mb-4 text-orange-500">Quick Links</h3>
             <ul className="space-y-2 text-gray-300">
               <li>
-                <a href="#" className="hover:text-orange-500 transition-colors">
-                  Dr. Karanam Aravinda Rao
-                </a>
+                <button
+                  onClick={() => onNavigate("dr-aravinda-rao")}
+                  className="hover:text-orange-500 transition-colors text-left"
+                >
+                  Dr. Aravinda Rao Karanam
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-orange-500 transition-colors">
+                <button
+                  onClick={() => onNavigate("about-hindu-digest")}
+                  className="hover:text-orange-500 transition-colors text-left"
+                >
                   About Hindu Digest
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-orange-500 transition-colors">
+                <button
+                  onClick={() => onNavigate("articles-main")}
+                  className="hover:text-orange-500 transition-colors text-left"
+                >
                   Articles
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-orange-500 transition-colors">
+                <button
+                  onClick={() => onNavigate("videos")}
+                  className="hover:text-orange-500 transition-colors text-left"
+                >
                   Videos
-                </a>
+                </button>
               </li>
               <li>
                 <a href="https://www.youtube.com/@hindu-digest" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500 transition-colors">

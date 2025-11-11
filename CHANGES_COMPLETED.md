@@ -22,12 +22,12 @@
 - ❌ Video (from Shop dropdown)
 
 #### Modified Items:
-- ✅ Q&A and Contact merged into "Q&A & Contact"
+- ✅ Q&A and Contact merged into "Contact"
 
 #### Final Navigation Structure:
 ```
 Home
-Dr. Karanam Aravinda Rao
+Dr. Aravinda Rao Karanam
 Hindu Digest
   └─ About Hindu Digest
 News
@@ -38,7 +38,7 @@ News
   └─ Talks & Interviews
 Shop
   └─ Books (only)
-Q&A & Contact
+Contact
 ```
 
 Files Updated:
@@ -116,7 +116,7 @@ Added same 5 books as above with:
 - Shopping functionality ready
 - Removed Audio & Video sections
 
-### 9. Q&A & Contact Page
+### 9.Contact Page
 **Status:** ✅ Complete
 
 Merged sections:

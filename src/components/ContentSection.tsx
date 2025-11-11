@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "motion/react";
 import { Book, Video, FileText, Music, MessageCircle, Youtube } from "lucide-react";
 import { ContactForm } from "./ContactForm";
@@ -6,9 +5,14 @@ import { Articles } from "./Articles";
 
 interface ContentSectionProps {
   section: string;
+  onNavigate?: (section: string) => void;
 }
 
 const wisdomQuotes = [
+  {
+    quote: "Hinduism is not merely a religion, but a way of life — a universal philosophy that harmonizes diversity, intellect, and devotion.",
+    author: "Dr. Aravinda Rao Karanam"
+  },
   {
     quote: "True understanding arises when wisdom and action flow together.",
     author: "Dr. Aravinda Rao Karanam"
@@ -16,84 +20,109 @@ const wisdomQuotes = [
   {
     quote: "Dharma is not a set of rituals or beliefs, but the eternal law that upholds the universe and guides righteous living.",
     author: "Dr. Aravinda Rao Karanam"
-  },
-  {
-    quote: "The wisdom of the Upanishads is not meant to be merely studied, but lived and experienced in daily life.",
-    author: "Dr. Aravinda Rao Karanam"
   }
 ];
 
 const bhagavadGitaSlokas = [
   {
-    sanskrit: "य एनं वेत्ति हन्तारं यश्चैनं मन्यते हतम्।\nउभौ तौ न विजानीतो नायं हन्ति न हन्यते \"॥ २-१९॥\"",
+    sanskrit: "य एनं वेत्ति हन्तारं यश्चैनं मन्यते हतम्।\nउभौ तौ न विजानीतो नायं हन्ति न हन्यते ॥ २-१९॥",
     transliteration: "ya enam vetti hantārām yaścainaṁ manyate hatam,\nubhau tau na vijānīto nāyaṁ hanti na hanyate .. 2-19..",
     translation: "One who considers this jiva as the slayer and one who considers it as slain are both incorrect. This jiva neither kills nor gets killed.",
     explanation: "The essential nature of jiva is consciousness which is eternal. The body may get killed but consciousness never ceases to exist.",
     source: "The Bhagavad Gita for A Modern Student by Dr. Aravinda Rao Karanam"
   },
+  // {
+  //   sanskrit: "मयि सर्वाणि कर्माणि संन्यस्याध्यात्मचेतसा।\nनिर्शीरनिर्ममो भूत्वा युध्यस्व विगतज्वः : ॥ ३-३० ॥",
+  //   transliteration: "māyi sarvāṇi karmāṇi samnyasyādhyātma-cetasā\nnirāśīr-nirmamo bhūtvā yudhyasva vigata-jvaraḥ .. 3-30..",
+  //   translation: "Do your fight, surrendering all actions to me (performing ethical duties as ordained), with your attention on the nature of Self, with no expectation or attachment, and without feverishness (anxiety).",
+  //   source: "The Bhagavad Gita for A Modern Student by Dr. Aravinda Rao Karanam"
+  // },
   {
-    sanskrit: "मयि सर्वाणि कर्माणि संन्यस्याध्यात्मचेतसा।\nनिर्शीरनिर्ममो भूत्वा युध्यस्व विगतज्वः \"॥ ३-३० ॥\"",
-    transliteration: "māyi sarvāṇi karmāṇi samnyasyādhyātma-cetasā\nnirāśīr-nirmamo bhūtvā yudhyasva vigata-jvaraḥ .. 3-30..",
-    translation: "Do your fight, surrendering all actions to me (performing ethical duties as ordained), with your attention on the nature of Self, with no expectation or attachment, and without feverishness (anxiety).",
-    source: "The Bhagavad Gita for A Modern Student by Dr. Aravinda Rao Karanam"
-  },
-  {
-    sanskrit: "न कर्मणामनारम्भान्नैष्कर्म्यं पुरुषोऽश्नुते।\nन च संन्यासनादेव सिद्धिं समधिगच्छति \"॥ ३-४ ॥\"",
+    sanskrit: "न कर्मणामनारम्भान्नैष्कर्म्यं पुरुषोऽश्नुते।\nन च संन्यासनादेव सिद्धिं समधिगच्छति ॥ ३-४ ॥",
     transliteration: "na karmaṇāṁ-anārambhān-naiṣkarmyaṁ puruṣo'śnute .\nna ca samnyāsanād-eva siddhiṁ sam-adhigacchati .. 3-4..",
     translation: "A person would not attain an actionless state by merely abandoning duty. He would not attain fulfillment by renouncing work.",
     source: "The Bhagavad Gita for A Modern Student by Dr. Aravinda Rao Karanam"
   },
+  // {
+  //   sanskrit: "कर्मजं बुद्धियुक्ता हि फलं त्यक्त्वा मनीषिणः।\nजन्मबन्धविनिर्मुक्ताः पदं गच्छन्त्यानामयम् ॥ २-५१ ॥",
+  //   transliteration: "karmajaṁ buddhi-yuktā hi phalaṁ tyaktvā maniṣiṇaḥ .\njanma-bandha-vinirmuktāḥ padaṁ gacchanty-anāmayam .. 2-51..",
+  //   translation: "Wise men, possessing evenness of mind, having given up the fruit of karma, get freed from the bond of birth (and death) and attain the state which is beyond sorrow.",
+  //   source: "The Bhagavad Gita for A Modern Student by Dr. Aravinda Rao Karanam"
+  // },
   {
-    sanskrit: "कर्मजं बुद्धियुक्ता हि फलं त्यक्त्वा मनीषिणः।\nजन्मबन्धविनिर्मुक्ताः पदं गच्छन्त्यानामयम् \"॥ २-५१ ॥\"",
-    transliteration: "karmajaṁ buddhi-yuktā hi phalaṁ tyaktvā maniṣiṇaḥ .\njanma-bandha-vinirmuktāḥ padaṁ gacchanty-anāmayam .. 2-51..",
-    translation: "Wise men, possessing evenness of mind, having given up the fruit of karma, get freed from the bond of birth (and death) and attain the state which is beyond sorrow.",
-    source: "The Bhagavad Gita for A Modern Student by Dr. Aravinda Rao Karanam"
-  },
-  {
-    sanskrit: "उद्धरेदात्मनात्मानं नात्मानमवसादयेत्।\nआत्मैव ह्यात्मनो बन्धुरात्मैव रिपुरात्मनः \"॥ ६-५ ॥\"",
+    sanskrit: "उद्धरेदात्मनात्मानं नात्मानमवसादयेत्।\nआत्मैव ह्यात्मनो बन्धुरात्मैव रिपुरात्मनः ॥ ६-५ ॥",
     transliteration: "uddhared-ātmanātmānaṁ nātmānam-avasādayet .\nātmaiva hyātmano bandhur-ātmaiva ripur-ātmanaḥ .. 6-5..",
     translation: "One should uplift oneself by one's own self and one should not weaken the self. It is because, the self is the friend of the self and the self is the enemy of oneself.",
     source: "The Bhagavad Gita for A Modern Student by Dr. Aravinda Rao Karanam"
   },
   {
-    sanskrit: "श्रेयान्स्वधर्मो विगुणः परधर्मात्स्वनुष्ठितात्।\nस्वभावनियतं कर्म कुर्वन्नाप्नोति किल्बिषम् \"॥ १८-४७ ॥\"",
+    sanskrit: "श्रेयान्स्वधर्मो विगुणः परधर्मात्स्वनुष्ठितात्।\nस्वभाव-नियतं कर्म कुर्वन्नाप्नोति किल्बिषम् ॥ १८-४७ ॥",
     transliteration: "śreyān-svadharmo viguṇaḥ para-dharmāt-svanuṣṭhitāt .\nsvabhāva-niyataṁ karma kurvann-āpnoti kilbiṣam .. 18-47..",
     translation: "One's own dharma, though devoid of excellence, is better for a person than someone else's dharma well observed. A person does not attain sin by performing karma (duty) determined by his nature.",
     source: "The Bhagavad Gita for A Modern Student by Dr. Aravinda Rao Karanam"
   },
   {
-    sanskrit: "विषया विनिवर्तन्ते निराहारस्य देहिनः।\nरसवर्जं रसोऽप्यस्य परं दृष्ट्वा निवर्तते \"॥ २-५९ ॥\"",
+    sanskrit: "विषया विनिवर्तन्ते निराहारस्य देहिनः।\nरसवर्जं रसोऽप्यस्य परं दृष्ट्वा निवर्तते ॥ २-५९ ॥",
     transliteration: "viṣayā vinivartante nirāhārasya dehinaḥ .\nrasa-varjaṁ raso'pyasya paraṁ dṛṣṭvā nivartate .. 2-59..",
     translation: "Sense objects withdraw when the person withdraws from them but the desire for them lingers. Such desire too retreats when the Supreme Truth is realized.",
-    source: "The Bhagavad Gita for A Modern Student by Dr. Karanam Aravinda Rao"
+    source: "The Bhagavad Gita for A Modern Student by Dr. Aravinda Rao Karanam"
   }
 ];
 
 const booksByDrRao = [
   {
+    title: "మన పిల్లలకు హిందూమతం చెప్పడం ఎలా?: Mana Pillalaku Hindumatam Cheppadam Ela?",
+    author: "Dr. Aravinda Rao Karanam",
+    description: "Telugu guide for parents on teaching Hinduism to children.",
+    imageUrl: "https://cdn.exoticindia.com/images/products/thumbnails/t400x300/books-2019-003/bae421.webp"
+  },
+  {
+    title: "పురోహిత ప్రపంచం: Purohita Prapancham",
+    author: "Dr. Aravinda Rao Karanam",
+    description: "Telugu edition exploring the world of priesthood.",
+    imageUrl: "https://cdn.exoticindia.com/images/products/thumbnails/t400x300/books-2019-003/bae423.webp"
+  },
+  {
+    title: "భగవద్గీత మనకేం చెబుతోంది?: Bhagavadgita Manakem Chebutoondi?",
+    author: "Dr. Aravinda Rao Karanam",
+    description: "Telugu exploration of the Bhagavad Gita's teachings.",
+    imageUrl: "https://cdn.exoticindia.com/images/products/thumbnails/t400x300/books-2019-003/bae294.webp"
+  },
+  {
+    title: "ఆదిత్య హృదయమ్: Aaditya Hridayam",
+    author: "Dr. Aravinda Rao Karanam",
+    description: "Telugu edition of the Aditya Hridayam.",
+    imageUrl: "https://cdn.exoticindia.com/images/products/thumbnails/t400x300/books-2019-003/bae424.webp"
+  },
+  {
+    title: "A Guide To Bhagavad Gita",
+    author: "Dr. Aravinda Rao Karanam",
+    description: "English guide to the Bhagavad Gita.",
+    imageUrl: "https://cdn.exoticindia.com/images/products/thumbnails/t400x300/books-2019-003/bae310.webp"
+  },
+  {
+    title: "सन्ध्यावन्दनम् (Sandhya-Vandanam): A Vedic Meditation on the Supreme Reality",
+    author: "Dr. Aravinda Rao Karanam",
+    description: "Sanskrit and English edition of Sandhya-Vandanam.",
+    imageUrl: "https://cdn.exoticindia.com/images/products/thumbnails/t400x300/books-2019-003/bae292.webp"
+  },
+  {
+    title: "Indic Religions – Challenges for Survival",
+    author: "Dr. Aravinda Rao Karanam",
+    description: "English analysis of challenges facing Indic religions.",
+    imageUrl: "https://cdn.exoticindia.com/images/products/thumbnails/t400x300/book-01-2025/hbf279.webp"
+  },
+  {
+    title: "How To Teach Hinduism To Your Child?",
+    author: "Dr. Aravinda Rao Karanam",
+    description: "English guide for teaching Hinduism to children.",
+    imageUrl: "https://cdn.exoticindia.com/images/products/thumbnails/t400x300/books-2019-003/bae309.webp"
+  },
+  {
     title: "The Bhagavad Gita for A Modern Student",
     author: "Dr. Aravinda Rao Karanam",
-    description: "A comprehensive modern commentary on the Bhagavad Gita, making ancient wisdom accessible to contemporary readers."
-  },
-  {
-    title: "Bhagawadgeetha Manakem Cheputhondi",
-    author: "Dr. Aravinda Rao Karanam",
-    description: "Telugu language exploration of the Bhagavad Gita's teachings and their relevance to modern life."
-  },
-  {
-    title: "Indic Religions Challenges for Survival",
-    author: "Dr. Aravinda Rao Karanam",
-    description: "An analysis of the contemporary challenges facing Indic religions and pathways for preservation."
-  },
-  {
-    title: "How to Teach Hinduism to Your Child?",
-    author: "Dr. Aravinda Rao Karanam",
-    description: "A practical guide for parents to introduce Hindu philosophy and values to children."
-  },
-  {
-    title: "Bharatiya Mataalu Desha Badrata Edurkontunna Savallu",
-    author: "Dr. Aravinda Rao Karanam",
-    description: "Telugu language work addressing challenges facing Indian religions and cultural survival."
+    description: "English commentary on the Bhagavad Gita for modern readers.",
+    imageUrl: "https://cdn.exoticindia.com/images/products/thumbnails/t400x300/books-2019-003/bae314.webp"
   }
 ];
 
@@ -111,13 +140,13 @@ const sectionContent: Record<
   home: {
     title: "Welcome to Hindu Digest",
     description:
-      "Hindu Digest is a sacred platform dedicated to preserving and sharing the profound teachings of Sanatana Dharma (Hinduism). Through insightful talks, articles, and discussions, Hindu Digest bridges timeless wisdom with modern life — guided by Dr. Karanam Aravinda Rao. Our content focuses on Advaita Vedanta, the Upanishads, the Bhagavad Gita, and living dharma today.",
+      "Hindu Digest is a sacred platform dedicated to preserving and sharing the profound teachings of Sanatana Dharma (Hinduism). Through insightful talks, articles, and discussions, Hindu Digest bridges timeless wisdom with modern life — guided by Dr. Aravinda Rao Karanam. Our content focuses on Advaita Vedanta, the Upanishads, the Bhagavad Gita, and living dharma today.",
     quote: wisdomQuotes[0]
   },
   "dr-aravinda-rao": {
     title: "Dr. Aravinda Rao Karanam",
     description:
-      "Dr. Aravinda Rao Karanam is a retired Director General of Police (DGP) of united Andhra Pradesh, an author and a leading speaker on Sanatana Dharma and Advaita Vedanta.",
+      "Dr. Aravinda Rao Karanam is a retired Director General of Police (DGP) of united Andhra Pradesh, an author and a leading speaker on Sanatana Dharma and Advaita Vedanta. He holds a Ph.D. in Sanskrit and has authored numerous books on Vedanta, Hinduism, and Indic religions.",
     showImage: true,
     imageUrl: "/images/Dr. Aravinda Rao Karanam.jpg",
     quote: wisdomQuotes[1]
@@ -125,7 +154,7 @@ const sectionContent: Record<
   "about-hindu-digest": {
     title: "About Hindu Digest",
     description:
-      "Hindu Digest is a sacred platform dedicated to preserving and sharing the profound teachings of Sanatana Dharma (Hinduism). Through insightful talks, articles, and discussions, Hindu Digest bridges timeless wisdom with modern life — guided by Dr. Karanam Aravinda Rao. Our content focuses on Advaita Vedanta, the Upanishads, the Bhagavad Gita, and living dharma today.",
+      "Hindu Digest is a sacred platform dedicated to preserving and sharing the profound teachings of Sanatana Dharma (Hinduism). Through insightful talks, articles, and discussions, Hindu Digest bridges timeless wisdom with modern life — guided by Dr. Aravinda Rao Karanam. Our content focuses on Advaita Vedanta, the Upanishads, the Bhagavad Gita, and living dharma today.",
     showImage: true,
     imageUrl: "/images/temple.jpg",
     quote: wisdomQuotes[2]
@@ -142,10 +171,15 @@ const sectionContent: Record<
     description: "Explore our comprehensive collection of articles on Sanatana Dharma.",
     icon: <FileText className="w-16 h-16 text-black" />,
   },
+  // "writings-dr-rao": {
+  //   title: "Writings by Dr. Aravinda Rao Karanam",
+  //   description: "Read profound insights from Dr. Aravinda Rao Karanam on Vedanta and Hindu philosophy.",
+  //   icon: <FileText className="w-16 h-16 text-black" />,
+  // },
   "teachings": {
     title: "Teachings & Wisdom Quotes",
     description:
-      "These carefully selected quotes from Dr. Karanam Aravinda Rao's teachings offer concentrated wisdom on Dharma, Karma, Bhakti, and the path to self-realization. Each quote invites deep contemplation and can serve as a guide for righteous living.",
+      "These carefully selected quotes from Dr. Aravinda Rao Karanam's teachings offer concentrated wisdom on Dharma, Karma, Bhakti, and the path to self-realization. Each quote invites deep contemplation and can serve as a guide for righteous living.",
     showImage: true,
     imageUrl: "/images/wisdom.jpg"
   },
@@ -158,14 +192,14 @@ const sectionContent: Record<
   "talks-interviews": {
     title: "Talks & Interviews",
     description:
-      "Listen to penetrating dialogues where Dr. Aravinda Rao Karanam responds to fundamental questions about existence, consciousness, and reality. These conversations reveal the spontaneous wisdom that flows when understanding is present, covering topics from the nature of enlightenment to practical questions about daily living.",
+      "Listen to penetrating dialogues where Dr. Aravinda Rao Karanam responds to fundamental questions about existence, consciousness, and reality. These conversations reveal the spontaneous wisdom that flows when understanding is present, covering topics from the nature of enlightenment to practical questions about daily living, including his notable speech on raising Hindu children in the USA.",
     showImage: true,
     imageUrl: "/images/meditation.jpg"
   },
   "videos": {
     title: "Videos & YouTube Channel",
     description:
-      "Explore our extensive collection of video lectures on Hindu philosophy, Vedanta, and Advaita. Dr. Karanam Aravinda Rao's teachings on the Bhagavad Gita, Upanishads, and other sacred texts are available on our YouTube channel. Subscribe to stay updated with new releases.",
+      "Explore our extensive collection of video lectures on Hindu philosophy, Vedanta, and Advaita. Dr. Aravinda Rao Karanam's teachings on the Bhagavad Gita, Upanishads, and other sacred texts are available on our YouTube channel. Subscribe to stay updated with new releases and access his lecture series on various themes including 'Basic Course on Hinduism' and 'Advaita Concepts'.",
     icon: <Youtube className="w-16 h-16 text-red-600" />,
     showImage: true,
     imageUrl: "/images/spiritual.jpg"
@@ -173,7 +207,7 @@ const sectionContent: Record<
   "media-clips": {
     title: "Media Clips",
     description:
-      "Watch short excerpts from Dr. Karanam Aravinda Rao's lectures and discourses. These clips capture key teachings on various topics including Karma Yoga, Bhakti, Dharma, and the nature of the Self.",
+      "Watch short excerpts from Dr. Aravinda Rao Karanam's lectures and discourses. These clips capture key teachings on various topics including Karma Yoga, Bhakti, Dharma, and the nature of the Self, as well as his insights on raising Hindu children in modern contexts.",
     icon: <Video className="w-16 h-16 text-black" />,
   },
   "bhakti-music": {
@@ -187,12 +221,12 @@ const sectionContent: Record<
   "shop": {
     title: "Shop",
     description:
-      "Support Hindu Digest's mission while enriching your spiritual library. Our shop features books, audio lectures, and video courses by Dr. Karanam Aravinda Rao covering various aspects of Hindu philosophy, Vedanta, Sanskrit, and spiritual practice.",
+      "Support Hindu Digest's mission while enriching your spiritual library. Our shop features books, audio lectures, and video courses by Dr. Aravinda Rao Karanam covering various aspects of Hindu philosophy, Vedanta, Sanskrit, and spiritual practice.",
   },
   "books": {
     title: "Books by Dr. Aravinda Rao Karanam",
     description:
-      "Discover comprehensive books on Vedanta, Advaita philosophy, and Hindu thought authored by Dr. Aravinda Rao Karanam. Key titles include: 'How to Teach Hinduism to Your Child?', 'Indic Religions: Challenges for Survival', 'Bhagavadgeetha Manakem Chebutondi?', and 'Analysis of Jnanam in the Upanishads' (Ph.D. thesis). Available in English and Telugu.",
+      "Discover comprehensive books on Vedanta, Advaita philosophy, and Hindu thought authored by Dr. Aravinda Rao Karanam. His works include guides for parents, commentaries on the Bhagavad Gita, analyses of Indic religions, and explorations of Hindu philosophy in multiple languages including English, Telugu, Kannada, and Sanskrit.",
     icon: <Book className="w-16 h-16 text-black" />,
     showImage: true,
     imageUrl: "/images/books.jpg"
@@ -200,19 +234,19 @@ const sectionContent: Record<
   "audio": {
     title: "Audio Lectures",
     description:
-      "Listen to Dr. Karanam Aravinda Rao's recorded lectures on various aspects of Hindu philosophy and Vedanta. Available in CD and MP3 formats. Our audio collection includes systematic studies of key texts, topical discussions, and guided contemplations.",
+      "Listen to Dr. Aravinda Rao Karanam's recorded lectures on various aspects of Hindu philosophy and Vedanta. Available in CD and MP3 formats. Our audio collection includes systematic studies of key texts, topical discussions, and guided contemplations.",
     icon: <Music className="w-16 h-16 text-black" />,
   },
   "video": {
     title: "Video Collection",
     description:
-      "Experience the complete atmosphere of Dr. Karanam Aravinda Rao's teachings through our video collection. Available in DVD and streaming formats. These comprehensive courses cover the Bhagavad Gita, major Upanishads, and fundamental concepts of Vedanta.",
+      "Experience the complete atmosphere of Dr. Aravinda Rao Karanam's teachings through our video collection. Available in DVD and streaming formats. These comprehensive courses cover the Bhagavad Gita, major Upanishads, and fundamental concepts of Vedanta.",
     icon: <Video className="w-16 h-16 text-black" />,
   },
   "qa": {
     title: "Q&A",
     description:
-      "Explore our extensive archive of questions on Hindu philosophy and Dr. Karanam Aravinda Rao's responses. Topics cover everything from basic concepts of Dharma to advanced Vedantic philosophy. Submit your own questions for consideration.",
+      "Explore our extensive archive of questions on Hindu philosophy and Dr. Aravinda Rao Karanam's responses. Topics cover everything from basic concepts of Dharma to advanced Vedantic philosophy. Submit your own questions for consideration.",
     icon: <MessageCircle className="w-16 h-16 text-black" />,
   },
   "contact": {
@@ -226,10 +260,10 @@ const sectionContent: Record<
   },
 };
 
-export function ContentSection({ section }: ContentSectionProps) {
+export function ContentSection({ section, onNavigate }: ContentSectionProps) {
   const content = sectionContent[section] || sectionContent.home;
 
-  // Special handling for Dr. Karanam Aravinda Rao profile page
+  // Special handling for Dr. Aravinda Rao Karanam profile page
   if (section === "dr-aravinda-rao") {
     return (
       <motion.div
@@ -254,7 +288,8 @@ export function ContentSection({ section }: ContentSectionProps) {
               <h1 className="text-4xl text-black">Dr. Aravinda Rao Karanam</h1>
               <p className="text-xl text-black">
                 Dr. Aravinda Rao Karanam is a retired Director General of Police (DGP) of united Andhra Pradesh,
-                an author and a leading speaker on Sanatana Dharma and Advaita Vedanta.
+                an author and a leading speaker on Sanatana Dharma and Advaita Vedanta. He holds a Ph.D. in Sanskrit
+                and has authored 12 books on Vedanta, Hinduism, and Indic religions in multiple languages.
               </p>
             </div>
           </div>
@@ -268,6 +303,7 @@ export function ContentSection({ section }: ContentSectionProps) {
                 <li>Key roles: Director-General of Police; Superintendent of Police in five districts; Commissioner of Police, Vijayawada; Inspector General of Greyhounds; Additional Director General of State Intelligence</li>
                 <li>Honors: Indian Police Medal and the President's Medal for Distinguished Service</li>
                 <li>Noted for experience in counter-terrorism and anti-Naxal operations</li>
+                <li>Recognized as an Anti-Naxal expert who combined operational efficiency with humane administration</li>
               </ul>
             </div>
 
@@ -275,28 +311,39 @@ export function ContentSection({ section }: ContentSectionProps) {
               <h2 className="text-2xl text-amber-900 mb-4">Philosophical & Academic Pursuits</h2>
               <ul className="space-y-2 text-amber-800 list-disc list-inside">
                 <li>Holds a Ph.D. in Sanskrit; author of Analysis of Jnanam in the Upanishads</li>
-                <li>Studied Vedanta under Padmasri Pullela Ramachandruduji and Shri Tatvavidhananda Swamiji</li>
-                <li>Focus: weaving ancient wisdom (Upanishads, Bhagavad Gita) into practical modern guidance</li>
+                <li>Studied Vedanta under Padma Shri Pullela Ramachandrudu and Shri Tattvavidananda Swamiji of Arsha Vidya Gurukulam</li>
+                <li>Focus: weaving ancient wisdom (Upanishads, Bhagavad Gita, Brahma Sutras, Shankara Bhashyas) into practical modern guidance</li>
+                <li>Integrates intellectual depth with modern intellectual clarity in talks and writings</li>
               </ul>
             </div>
 
             <div className="bg-white/60 backdrop-blur-sm rounded-3xl border-2 border-orange-300/50 shadow-xl p-8">
               <h2 className="text-2xl text-amber-900 mb-4">Publications & Selected Works</h2>
+              <p className="text-amber-800 mb-4">Dr. Aravinda Rao Karanam has authored 12 books in English, Telugu, Kannada, and Sanskrit:</p>
               <ul className="space-y-2 text-amber-800 list-disc list-inside">
-                <li><em>How to Teach Hinduism to Your Child?</em></li>
-                <li><em>Indic Religions: Challenges for Survival</em></li>
-                <li><em>Bhagavadgeetha Manakem Chebutondi?</em></li>
-                <li><em>Analysis of Jnanam in the Upanishads</em> (Ph.D. dissertation)</li>
+                <li><em>How to Teach Hinduism to Your Child?</em> (English & Telugu editions)</li>
+                <li><em>The Bhagavad Gita for a Modern Student</em> (English)</li>
+                <li><em>Indic Religions: Challenges for Survival</em> (English)</li>
+                <li><em>Bhagawadgeetha Manakem Cheputhondi?</em> (Telugu)</li>
+                <li><em>Analysis of Jnanam in the Upanishads</em> (Sanskrit, Ph.D. dissertation)</li>
+                <li><em>Mana Pillalaku Hindhu Matham Cheppadam Ela?</em> (Telugu)</li>
+                <li><em>Nimma Maguvige Hindutvavannu Kalisuvudu Hege?</em> (Kannada)</li>
+                <li><em>Nitya Jeevitamlo Bhagavad Geetha</em> (Telugu)</li>
+                <li><em>Bharatiya Mataalu – Desha Bhadrata Edurkontunna Savallu</em> (Telugu)</li>
+                <li><em>Organized Networks of Carbon Nanotubes</em> (English, co-authored scientific work)</li>
               </ul>
             </div>
 
             <div className="bg-white/60 backdrop-blur-sm rounded-3xl border-2 border-orange-300/50 shadow-xl p-8">
               <h2 className="text-2xl text-amber-900 mb-4">Online & Public Presence</h2>
               <p className="text-amber-800 mb-4">
-                Educator at <a href="https://sanskritfromhome.org" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:underline">sanskritfromhome.org</a> and contributor to Indica Today.
+                Educator at <a href="https://www.sanskritfromhome.org/teacher-profile/Dr.-Karanam-Aravinda-Rao-89166656" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:underline">sanskritfromhome.org</a> and contributor to <a href="https://www.indica.today/author/k-aravinda-rao/" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:underline">Indica Today</a>.
               </p>
               <p className="text-amber-800 mb-4">
-                Active content creator on the <a href="https://youtube.com/@hindu-digest" target="_blank" rel="noopener noreferrer" className="text-red-600 hover:underline">Hindu Digest YouTube channel</a>.
+                Active content creator on the <a href="https://youtube.com/@hindu-digest" target="_blank" rel="noopener noreferrer" className="text-red-600 hover:underline">Hindu Digest YouTube channel</a> with lecture series including "Basic Course on Hinduism", "Understanding Hinduism", and "Advaita Concepts".
+              </p>
+              <p className="text-amber-800 mb-4">
+                Delivered notable speech: "How to Raise and Protect Our Precious Hindu Children in USA" at Karya Siddhi Hanuman Temple, Frisco, Texas (June 9, 2024).
               </p>
               <div className="flex gap-4 mt-6">
                 <a
@@ -309,12 +356,20 @@ export function ContentSection({ section }: ContentSectionProps) {
                   YouTube Channel
                 </a>
                 <a
-                  href="https://sanskritfromhome.org"
+                  href="https://www.sanskritfromhome.org/teacher-profile/Dr.-Karanam-Aravinda-Rao-89166656"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors shadow-lg"
                 >
                   SanskritFromHome.org
+                </a>
+                <a
+                  href="https://www.indica.today/author/k-aravinda-rao/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-lg"
+                >
+                  Indica Today
                 </a>
               </div>
             </div>
@@ -432,7 +487,7 @@ export function ContentSection({ section }: ContentSectionProps) {
             </h2>
             <div className="w-24 h-1 bg-orange-500 mx-auto mb-6" />
             <p className="text-lg text-amber-800 max-w-2xl mx-auto mb-8">
-              Explore our extensive archive of questions on Hindu philosophy and Dr. Karanam Aravinda Rao's responses. 
+              Explore our extensive archive of questions on Hindu philosophy and Dr. Aravinda Rao Karanam's responses. 
               We also welcome your inquiries about our teachings, programs, and resources.
             </p>
           </div>
@@ -461,31 +516,45 @@ export function ContentSection({ section }: ContentSectionProps) {
             <div className="bg-white/60 backdrop-blur-sm rounded-3xl border-2 border-orange-300/50 shadow-xl p-8">
               <h2 className="text-2xl text-black mb-4">Overview</h2>
               <p className="text-black mb-4">
-                Aravinda Rao Karanam is a retired DGP of Andhra Pradesh, scholar of Sanskrit and Vedanta.
+                Dr. Aravinda Rao Karanam is a retired Director General of Police (DGP) of Andhra Pradesh, scholar of Sanskrit and Vedanta.
               </p>
               <p className="text-black mb-4">
-                He delivers a number of video-series on YouTube under themes like: "Basic Course on Hinduism",
-                "Understanding Hinduism", "Advaita Concepts".
+                He delivers video series on YouTube under themes like: "Basic Course on Hinduism",
+                "Understanding Hinduism", "Advaita Concepts", and has authored 12 books on Hindu philosophy.
               </p>
               <p className="text-black">
-                On the site "SaveTemples.org" there is a category labelled Hindu Digest which collects articles
-                and posts about Hindu traditions, temple preservation etc.
+                Hindu Digest serves as a platform for his teachings, bridging timeless wisdom with modern life through articles, talks, and discussions on Advaita Vedanta, the Upanishads, and the Bhagavad Gita.
               </p>
+            </div>
+
+            <div className="bg-white/60 backdrop-blur-sm rounded-3xl border-2 border-orange-300/50 shadow-xl p-8">
+              <h2 className="text-2xl text-black mb-4">Mission & Vision</h2>
+              <p className="text-black mb-4">
+                Hindu Digest aims to spread the light of Sanatana Dharma worldwide through the teachings of
+                Dr. Aravinda Rao Karanam. The mission is to make Hindu philosophy accessible to modern audiences,
+                especially the younger generation.
+              </p>
+              <p className="text-black mb-4">
+                Key focus areas include:
+              </p>
+              <ul className="space-y-2 text-black list-disc list-inside">
+                <li>Education on Hindu philosophy and Vedanta through Dr. Rao's books and lectures</li>
+                <li>Preservation of cultural heritage and temple protection</li>
+                <li>Guidance for Hindu families and children, including raising children abroad</li>
+                <li>Bridging ancient wisdom with contemporary life through practical teachings</li>
+              </ul>
             </div>
 
             <div className="bg-white/60 backdrop-blur-sm rounded-3xl border-2 border-orange-300/50 shadow-xl p-8">
               <h2 className="text-2xl text-black mb-4">What "Hindu Digest" Means</h2>
               <p className="text-black mb-4">
-                In the context of his work, Hindu Digest refers to digest-style summarised content about
-                Hindu philosophy, practice, heritage, and culture.
+                Hindu Digest refers to digest-style summarized content about Hindu philosophy, practice, heritage, and culture as presented by Dr. Aravinda Rao Karanam.
               </p>
               <p className="text-black mb-4">
-                The "SaveTemples.org" portal lists "Category: Hindu Digest" where articles like temple-protection,
-                Hindu children's education abroad, and cultural matters are posted.
+                The platform features articles on temple protection, Hindu children's education abroad, cultural preservation, and spiritual teachings.
               </p>
               <p className="text-black">
-                On his YouTube talks, though they may not be labeled exactly "Hindu Digest", many cover broad
-                themes of Hinduism (e.g., "Understanding Hinduism-01"), which serve a similar digest/overview role.
+                Through his YouTube talks and writings, Dr. Rao provides accessible overviews of Hinduism, covering themes from basic concepts to advanced Vedantic philosophy.
               </p>
             </div>
 
@@ -587,7 +656,7 @@ export function ContentSection({ section }: ContentSectionProps) {
     );
   }
 
-  // Special handling for Writings by Dr. Karanam Aravinda Rao
+  // Special handling for Writings by Dr. Aravinda Rao Karanam
   if (section === "writings-dr-rao") {
     return (
       <motion.div
@@ -615,7 +684,11 @@ export function ContentSection({ section }: ContentSectionProps) {
                 className="bg-white/60 backdrop-blur-sm rounded-xl p-6 shadow-lg border-2 border-orange-300/50 hover:border-orange-500 transition-all"
               >
                 <div className="flex items-start gap-4 mb-4">
-                  <Book className="w-8 h-8 text-orange-500 flex-shrink-0 mt-1" />
+                  <img
+                    src={book.imageUrl}
+                    alt={book.title}
+                    className="w-16 h-20 object-cover rounded-md flex-shrink-0"
+                  />
                   <h3 className="text-xl text-black">{book.title}</h3>
                 </div>
                 <p className="text-sm text-orange-600 mb-3">by {book.author}</p>
@@ -629,7 +702,10 @@ export function ContentSection({ section }: ContentSectionProps) {
             <p className="text-black mb-6">
               Visit our shop to purchase these insightful works and deepen your understanding of Sanatana Dharma
             </p>
-            <button className="px-8 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors shadow-lg">
+            <button
+              onClick={() => onNavigate?.("shop")}
+              className="px-8 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors shadow-lg"
+            >
               Visit Shop
             </button>
           </div>
@@ -667,12 +743,19 @@ export function ContentSection({ section }: ContentSectionProps) {
                 className="bg-white/60 backdrop-blur-sm rounded-xl p-6 shadow-lg border-2 border-orange-300/50 hover:border-orange-500 transition-all"
               >
                 <div className="flex items-start gap-4 mb-4">
-                  <Book className="w-8 h-8 text-orange-500 flex-shrink-0 mt-1" />
+                  <img
+                    src={book.imageUrl}
+                    alt={book.title}
+                    className="w-16 h-20 object-cover rounded-md flex-shrink-0"
+                  />
                   <h3 className="text-xl text-black">{book.title}</h3>
                 </div>
                 <p className="text-sm text-orange-600 mb-3">by {book.author}</p>
                 <p className="text-black leading-relaxed mb-4">{book.description}</p>
-                <button className="w-full px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors shadow">
+                <button
+                  onClick={() => onNavigate?.("basket")}
+                  className="w-full px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors shadow"
+                >
                   Add to Basket
                 </button>
               </div>
@@ -711,7 +794,7 @@ export function ContentSection({ section }: ContentSectionProps) {
                 width="100%"
                 height="100%"
                 src="https://www.youtube.com/embed/Q3tNA7Kjn1s"
-                title="Interview with Dr. Karanam Aravinda Rao"
+                title="Interview with Dr. Aravinda Rao Karanam"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -721,7 +804,7 @@ export function ContentSection({ section }: ContentSectionProps) {
             <div className="p-6">
               <h3 className="text-2xl text-black mb-3">Featured Interview</h3>
               <p className="text-black mb-4">
-                Watch Dr. Karanam Aravinda Rao discuss the fundamentals of Hinduism and Vedanta philosophy
+                Watch Dr. Aravinda Rao Karanam discuss the fundamentals of Hinduism and Vedanta philosophy
               </p>
               <a
                 href="https://www.youtube.com/watch?v=Q3tNA7Kjn1s"
@@ -741,15 +824,23 @@ export function ContentSection({ section }: ContentSectionProps) {
             <p className="text-black mb-6">
               Visit our YouTube channel for a complete collection of talks, interviews, and discussions
             </p>
-            <a
-              href="https://youtube.com/@hindu-digest"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors shadow-lg"
-            >
-              <Youtube className="w-6 h-6" />
-              Visit YouTube Channel
-            </a>
+            <div className="flex flex-wrap justify-center gap-4">
+              <button
+                onClick={() => onNavigate?.("videos")}
+                className="px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors shadow-lg"
+              >
+                Explore More
+              </button>
+              <a
+                href="https://youtube.com/@hindu-digest"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors shadow-lg"
+              >
+                <Youtube className="w-6 h-6" />
+                Visit YouTube Channel
+              </a>
+            </div>
           </div>
         </div>
       </motion.div>
@@ -830,7 +921,7 @@ export function ContentSection({ section }: ContentSectionProps) {
           <div className="mt-12 text-center bg-gradient-to-r from-orange-100/80 to-amber-100/80 rounded-2xl p-8 shadow-lg">
             <h3 className="text-2xl text-black mb-4">Explore More Teachings</h3>
             <p className="text-black mb-6">
-              Discover more wisdom from Dr. Karanam Aravinda Rao's teachings on the Bhagavad Gita and Vedanta
+              Discover more wisdom from Dr. Aravinda Rao Karanam's teachings on the Bhagavad Gita and Vedanta
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
@@ -842,7 +933,10 @@ export function ContentSection({ section }: ContentSectionProps) {
                 <Youtube className="w-5 h-5" />
                 YouTube Channel
               </a>
-              <button className="px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors shadow-lg">
+              <button
+                onClick={() => onNavigate?.("shop")}
+                className="px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors shadow-lg"
+              >
                 Shop Books
               </button>
             </div>
@@ -896,12 +990,14 @@ export function ContentSection({ section }: ContentSectionProps) {
           )}
 
           <div className="mt-8 flex justify-center gap-4">
-            <button className="px-6 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors shadow-lg">
-              Explore More
-            </button>
-            <button className="px-6 py-2 bg-white/90 text-black border-2 border-orange-400 rounded-lg hover:bg-orange-50 hover:border-orange-500 transition-colors shadow-lg">
-              Contact Us
-            </button>
+            {section === "hindu-digest" && (
+              <a
+                href="#about-hindu-digest"
+                className="px-8 py-3 bg-transparent text-amber-900 border-2 border-orange-500 rounded-md hover:bg-orange-50 transition-colors shadow-md hover:shadow-lg"
+              >
+                Learn More
+              </a>
+            )}
           </div>
         </div>
       </div>

@@ -62,7 +62,7 @@ public/
 ## Navigation Structure
 
 - **Home** - Hero section with welcome message and Ganesha image
-- **Dr. Karanam Aravinda Rao** - Information about the teacher
+- **Dr. Aravinda Rao Karanam** - Information about the teacher
 - **Hindu Digest** (Dropdown)
   - About Hindu Digest
 - **News** (Dropdown)
