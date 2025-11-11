@@ -1,11 +1,12 @@
+import React from "react";
 import { ShoppingCart } from "lucide-react";
 
-interface HeaderProps {
+export interface HeaderProps {
   onBasketClick: () => void;
   basketCount: number;
 }
 
-export function Header({ onBasketClick, basketCount }: HeaderProps) {
+export const Header: React.FC<HeaderProps> = ({ onBasketClick, basketCount }) => {
   return (
     <header className="bg-gradient-to-r from-orange-50 via-amber-50 to-orange-50 border-b-2 border-orange-400 shadow-md px-4 py-4 md:px-8">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
