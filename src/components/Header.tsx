@@ -3,7 +3,7 @@ import { ShoppingCart } from "lucide-react";
 
 export interface HeaderProps {
   onBasketClick: () => void;
-  basketCount: number;
+  basketCount?: number;
 }
 
 export const Header: React.FC<HeaderProps> = ({ onBasketClick, basketCount }) => {
@@ -44,7 +44,7 @@ export const Header: React.FC<HeaderProps> = ({ onBasketClick, basketCount }) =>
           >
             <ShoppingCart className="w-5 h-5 text-orange-600" />
             <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">
-              {basketCount}
+              {basketCount || 0}
             </span>
           </button>
         </div>
