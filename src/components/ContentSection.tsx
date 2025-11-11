@@ -3,9 +3,19 @@ import { Book, Video, FileText, Music, MessageCircle, Youtube } from "lucide-rea
 import { ContactForm } from "./ContactForm";
 import { Articles } from "./Articles";
 
+interface Book {
+  title: string;
+  author: string;
+  description: string;
+  imageUrl: string;
+}
+
 interface ContentSectionProps {
   section: string;
   onNavigate?: (section: string) => void;
+  basket?: Book[];
+  onAddToBasket?: (book: Book) => void;
+  onRemoveFromBasket?: (index: number) => void;
 }
 
 const wisdomQuotes = [
@@ -260,7 +270,7 @@ const sectionContent: Record<
   },
 };
 
-export function ContentSection({ section, onNavigate }: ContentSectionProps) {
+export function ContentSection({ section, onNavigate, basket = [], onAddToBasket, onRemoveFromBasket }: ContentSectionProps) {
   const content = sectionContent[section] || sectionContent.home;
 
   // Special handling for Dr. Aravinda Rao Karanam profile page
@@ -753,7 +763,7 @@ export function ContentSection({ section, onNavigate }: ContentSectionProps) {
                 <p className="text-sm text-orange-600 mb-3">by {book.author}</p>
                 <p className="text-black leading-relaxed mb-4">{book.description}</p>
                 <button
-                  onClick={() => onNavigate?.("basket")}
+                  onClick={() => onAddToBasket?.(book)}
                   className="w-full px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors shadow"
                 >
                   Add to Basket
@@ -941,6 +951,71 @@ export function ContentSection({ section, onNavigate }: ContentSectionProps) {
               </button>
             </div>
           </div>
+        </div>
+      </motion.div>
+    );
+  }
+
+  // Special handling for basket section
+  if (section === "basket") {
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="py-16 px-4 md:px-8 relative"
+      >
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl text-black mb-4">
+              Shopping Basket
+            </h2>
+            <div className="w-24 h-1 bg-orange-500 mx-auto mb-6" />
+            <p className="text-xl text-black max-w-3xl mx-auto">
+              {basket && basket.length > 0 ? `You have ${basket.length} item${basket.length > 1 ? 's' : ''} in your basket` : content.description}
+            </p>
+          </div>
+
+          {basket && basket.length > 0 ? (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {basket.map((book, index) => (
+                <div
+                  key={index}
+                  className="bg-white/60 backdrop-blur-sm rounded-xl p-6 shadow-lg border-2 border-orange-300/50 hover:border-orange-500 transition-all"
+                >
+                  <div className="flex items-start gap-4 mb-4">
+                    <img
+                      src={book.imageUrl}
+                      alt={book.title}
+                      className="w-16 h-20 object-cover rounded-md flex-shrink-0"
+                    />
+                    <h3 className="text-xl text-black">{book.title}</h3>
+                  </div>
+                  <p className="text-sm text-orange-600 mb-3">by {book.author}</p>
+                  <p className="text-black leading-relaxed mb-4">{book.description}</p>
+                  <button
+                    onClick={() => onRemoveFromBasket?.(index)}
+                    className="w-full px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors shadow"
+                  >
+                    Remove from Basket
+                  </button>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center bg-gradient-to-r from-orange-100/80 to-amber-100/80 rounded-2xl p-8 shadow-lg">
+              <h3 className="text-2xl text-black mb-4">Your Basket is Empty</h3>
+              <p className="text-black mb-6">
+                Browse our shop to discover books, audio lectures, and video courses that will deepen your understanding of Hindu philosophy and Vedanta.
+              </p>
+              <button
+                onClick={() => onNavigate?.("shop")}
+                className="px-8 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors shadow-lg"
+              >
+                Visit Shop
+              </button>
+            </div>
+          )}
         </div>
       </motion.div>
     );

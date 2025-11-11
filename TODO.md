@@ -1,13 +1,14 @@
-# TODO: Fix Non-Functional Buttons in ContentSection.tsx
+# TODO: Implement Basket Functionality
 
 ## Tasks to Complete
 
-- [x] Add onClick handler to "Explore More" button in talks-interviews section (navigate to "videos")
-- [x] Add onClick handler to "Shop Books" button in teachings section (navigate to "shop")
-- [x] Add onClick handler to "Visit Shop" button in writings-dr-rao section (navigate to "shop")
-- [x] Add onClick handler to "Add to Basket" buttons in books section (navigate to "basket")
-- [x] Test navigation by running the app and clicking the buttons (app started on localhost:3000)
+- [ ] Add basket state (array of books) to App.tsx
+- [ ] Modify books section: "Add to Basket" buttons add the book to basket state and navigate to basket
+- [ ] Modify basket section: display added books with remove functionality
+- [ ] Update Header component to show basket item count
+- [ ] Test adding/removing books from basket
+- [ ] Verify navigation and UI updates
 
 ## Progress Tracking
 - Started: [Current Date/Time]
-- Completed: Added onClick handlers to all identified buttons
+- Completed: Analyzed the issue and created implementation plan

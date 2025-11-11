@@ -7,16 +7,32 @@ import { ContentSection } from "./components/ContentSection";
 import { Footer } from "./components/Footer";
 import TraditionalBackground from "./components/TraditionalBackground";
 
+interface Book {
+  title: string;
+  author: string;
+  description: string;
+  imageUrl: string;
+}
+
 export default function App() {
   const [activeSection, setActiveSection] = useState("home");
   const [showHero, setShowHero] = useState(true);
+  const [basket, setBasket] = useState<Book[]>([]);
 
   const handleNavigate = (section: string) => {
     setActiveSection(section);
     setShowHero(section === "home");
-    
+
     // Smooth scroll to content
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const addToBasket = (book: Book) => {
+    setBasket(prev => [...prev, book]);
+  };
+
+  const removeFromBasket = (index: number) => {
+    setBasket(prev => prev.filter((_, i) => i !== index));
   };
 
   return (
@@ -25,7 +41,7 @@ export default function App() {
       <TraditionalBackground />
       
       {/* Header */}
-      <Header onBasketClick={() => handleNavigate("basket")} />
+      <Header onBasketClick={() => handleNavigate("basket")} basketCount={basket.length} />
 
       {/* Navigation */}
       <Navigation onNavigate={handleNavigate} activeSection={activeSection} />
@@ -36,7 +52,13 @@ export default function App() {
 
       {/* Main Content */}
       <main className="flex-1 relative z-0">
-        <ContentSection section={activeSection} />
+        <ContentSection
+          section={activeSection}
+          onNavigate={handleNavigate}
+          basket={basket}
+          onAddToBasket={addToBasket}
+          onRemoveFromBasket={removeFromBasket}
+        />
       </main>
 
       {/* Footer */}

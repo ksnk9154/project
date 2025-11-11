@@ -2,9 +2,10 @@ import { ShoppingCart } from "lucide-react";
 
 interface HeaderProps {
   onBasketClick: () => void;
+  basketCount: number;
 }
 
-export function Header({ onBasketClick }: HeaderProps) {
+export function Header({ onBasketClick, basketCount }: HeaderProps) {
   return (
     <header className="bg-gradient-to-r from-orange-50 via-amber-50 to-orange-50 border-b-2 border-orange-400 shadow-md px-4 py-4 md:px-8">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -42,7 +43,7 @@ export function Header({ onBasketClick }: HeaderProps) {
           >
             <ShoppingCart className="w-5 h-5 text-orange-600" />
             <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">
-              0
+              {basketCount}
             </span>
           </button>
         </div>
